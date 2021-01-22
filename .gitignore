@@ -99,3 +99,14 @@ Temporary Items
 .apdisk
 
 .idea
+MapleCorners/[Ll]ibrary/
+MapleCorners/[Tt]emp/
+MapleCorners/[Oo]bj/
+MapleCorners/[Bb]uild/
+MapleCorners/[Bb]uilds/
+MapleCorners/[Ll]ogs/
+MapleCorners/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size.
+# They also could contain extremely sensitive data
+MapleCorners/[Mm]emoryCaptures/
