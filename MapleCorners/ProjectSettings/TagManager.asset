@@ -69,3 +69,6 @@ TagManager:
   - name: Collisions
     uniqueID: 322603985
     locked: 0
+  - name: Instances
+    uniqueID: 2062627129
+    locked: 0

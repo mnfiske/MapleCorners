@@ -1,7 +1,5 @@
 ﻿// "Citation: Unity 2D Game Developer Course Farming RPG"
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Using the British spelling because it's inheriting Unity.MonoBehaviour and I feel like mixing the spellings would be confusing

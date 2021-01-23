@@ -6,3 +6,18 @@ public enum SceneName
      Scene1_Apartment,
      Scene2_Roof,
 }
+
+public enum ToolEffect
+{
+    none,
+    watering
+}
+
+public enum Direction
+{
+    up,
+    down,
+    left,
+    right,
+    none
+}
