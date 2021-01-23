@@ -1,0 +1,14 @@
+Tools Used:
+
+Title Graphic Generator:
+https://cooltext.com/Logo-Design-Fun
+	used "fun" text generator
+
+
+
+Graphics:
+UI_Elements01
+https://vapxiel.itch.io/pixel-ui-elements-pack-1
+
+buttons.png
+https://opengameart.org/content/blank-button

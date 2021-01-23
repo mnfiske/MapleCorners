@@ -45,7 +45,7 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
     // Only call FadeAndTransition if we're not already executing a fade
     if (!isFadingActive)
     {
-      StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
+      //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
     }
   }
 }
