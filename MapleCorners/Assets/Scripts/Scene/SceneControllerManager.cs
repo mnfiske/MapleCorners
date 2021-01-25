@@ -40,12 +40,12 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
   /// </summary>
   /// <param name="destinationName">Name of the scene to load</param>
   /// <param name="destinationPosition">The position the player should spawn in, in the destination scene</param>
-  public void transitionScene(string destinationName, Vector3 destinationPosition)
-  {
-    // Only call FadeAndTransition if we're not already executing a fade
-    if (!isFadingActive)
-    {
-      //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
-    }
-  }
+  //public void transitionScene(string destinationName, Vector3 destinationPosition)
+  //{
+  //  // Only call FadeAndTransition if we're not already executing a fade
+  //  if (!isFadingActive)
+  //  {
+  //    //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
+  //  }
+  //}
 }
