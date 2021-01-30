@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 300780046}
   - component: {fileID: 300780045}
   - component: {fileID: 300780047}
+  - component: {fileID: 300780048}
   m_Layer: 0
   m_Name: PlayerFollowCam
   m_TagString: Untagged
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1190759354}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 8.4375
@@ -431,6 +432,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &300780048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300780044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4b8e6f39ea29b44a03329600aff5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364074570
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +794,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1190759354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7803739413228535610, guid: ec6fb9777a9bf4b78ac779564def71e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6124381667303347874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1335335695
 GameObject:
   m_ObjectHideFlags: 0
