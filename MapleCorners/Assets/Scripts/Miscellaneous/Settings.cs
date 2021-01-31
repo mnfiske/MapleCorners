@@ -35,7 +35,10 @@ public static class Settings
     public static int idleLeft;
     public static int idleRight;
 
-    static Settings()
+    //Time
+    public const float secondsPerGameSecond = 0.012f; //~Every .7 seconds is a game minute
+
+  static Settings()
     {
         xInput = Animator.StringToHash("xInput");
         yInput = Animator.StringToHash("yInput");
