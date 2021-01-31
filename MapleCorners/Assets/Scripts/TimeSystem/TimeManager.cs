@@ -109,6 +109,7 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>
     }
   }
 
+  #region Test Methods
   public void TestAdvanceGameMinute()
   {
     int secondsInMinute = 60;
@@ -128,4 +129,5 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>
       updateTime();
     }
   }
+  #endregion
 }
