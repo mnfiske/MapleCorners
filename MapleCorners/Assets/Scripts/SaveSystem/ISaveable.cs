@@ -10,11 +10,11 @@ public interface ISaveable
 
   GameObjectSave GameObjectSave { get; set; }
 
-  void ISavableRegister();
+  void ISaveableRegister();
 
-  void ISavableDeregister();
+  void ISaveableDeregister();
 
-  void ISavableStoreScene();
+  void ISaveableStoreScene(string name);
 
-  void ISavableRestoreSceme();
+  void ISaveableRestoreScene(string name);
 }

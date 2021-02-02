@@ -2,7 +2,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadManager : SingletonMonoBehavior<SaveLoadManager>
 {
@@ -15,11 +15,11 @@ public class SaveLoadManager : SingletonMonoBehavior<SaveLoadManager>
     iSaveableObjects = new List<ISaveable>();
   }
 
-  //public void StoreCurrentSceneData()
-  //{
-  //  foreach (ISaveable obj in iSaveableObjects)
-  //  {
-  //    obj.ISavableStoreScene(SceneMans)
-  //  }
-  //}
+  public void StoreCurrentSceneData()
+  {
+    foreach (ISaveable obj in iSaveableObjects)
+    {
+      obj.ISaveableRestoreScene(SceneManager.GetActiveScene().name);
+    }
+  }
 }
