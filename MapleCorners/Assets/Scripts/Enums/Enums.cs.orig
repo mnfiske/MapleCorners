@@ -21,21 +21,8 @@ public enum Direction
     right,
     none
 }
-public enum ItemType
-{
-    Seed,
-    Commodity,
-    Watering_tool,
-    Hoeing_tool,
-    Chopping_tool,
-    Breaking_tool,
-    Reaping_tool,
-    Collecting_tool,
-    Reapable_scenery,
-	Furniture,
-    none,
-    count
-}
+
+<<<<<<< HEAD
 /// <summary>
 /// The season of the year. Our MVP has only one season, but the season is being included to reduce the refactoring necessary
 /// to add seasons if we are able to develop beyond the MVP goals.
@@ -59,5 +46,20 @@ public enum Weekday
   Thu,
   Fri,
   Sat
+=======
+public enum ItemType
+{
+    Seed,
+    Commodity,
+    Watering_tool,
+    Hoeing_tool,
+    Chopping_tool,
+    Breaking_tool,
+    Reaping_tool,
+    Collecting_tool,
+    Reapable_scenery,
+	Furniture,
+    none,
+    count
+>>>>>>> a7ad7125e7edd74daa532c8ddab039c9cda59b59
 }
-
