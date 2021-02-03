@@ -9,8 +9,11 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
 
     [SerializeField] private SO_ItemList itemList = null;
 
-    private void Start()
+    // awake occurs before start, ensures that Item Details Dictionary will be created first
+    protected override void Awake()
     {
+        base.Awake(); //ensures that awake in singletonmono still runs
+
         // create dictionary
         CreateItemDetailsDictionary();
     }
