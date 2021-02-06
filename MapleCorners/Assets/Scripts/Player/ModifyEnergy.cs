@@ -6,22 +6,21 @@ using UnityEngine;
 public class ModifyEnergy : MonoBehaviour
 {
     [SerializeField] private float bedEnergy;
-    [SerializeField] private EnergyController energyController;
+    //[SerializeField] private EnergyController energyController;
 
     // if the player object collides with the bed object, it will reset the player's energy
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            Debug.Log(energyController.GetEnergy());
-            ResetEnergy();
+            ResetEnergy(bedEnergy);
         }
     }
 
     // this will reset energy to full stats (100)
-    void ResetEnergy()
+    void ResetEnergy(float energyModifer)
     {
         // update energy variable
-        energyController.SetEnergy(100f);
+        EnergyController.Instance.SetEnergy(energyModifer);
     }
 }

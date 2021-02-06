@@ -7,6 +7,14 @@ public class EnergyController : SingletonMonoBehavior<EnergyController>
     //Serialize will make it visible in the Unity inspector, but it's still private to this script
     [SerializeField] private Text energyText;
 
+
+    // Preserve information regardless of scenes
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
         // Set Initial Energy Level
@@ -22,7 +30,7 @@ public class EnergyController : SingletonMonoBehavior<EnergyController>
 
     public void SetEnergy(float newEnergy)
     {
-        playerEnergy = newEnergy;
+        playerEnergy = playerEnergy + newEnergy;
         UpdateEnergy();
     }
 
