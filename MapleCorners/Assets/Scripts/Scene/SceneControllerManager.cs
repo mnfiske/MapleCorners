@@ -48,4 +48,46 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
   //    //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
   //  }
   //}
+  //private IEnumerator FadeAndSwitchScenes(string sceneName, Vector3 spawnPosition)
+  //{
+  //  EventHandler.CallBeforeUnloadSceneFadeEvent();
+
+  //  yield return StartCoroutine(Fade(1f));
+
+  //  // Store the current scene data
+  //  SaveLoadManager.Instance.StoreCurrentSceneData();
+
+  //  Player.Instance.gameObject.transform.position = spawnPosition;
+
+  //  EventHandler.CallBeforeUnloadSceneEvent();
+
+  //  yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
+  //  yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+
+  //  EventHandler.CallAfterLoadSceneEvent();
+
+  //  // Restore the new scene data
+  //  SaveLoadManager.Instance.RestoreCurrentSceneData();
+
+  //  yield return StartCoroutine(Fade(0f));
+
+  //  EventHandler.CallAfterLoadSceneFadeEvent();
+  //}
+  
+  //private IEnumerator Start()
+  //{
+  //  fadeImage.color = new Color(0f, 0f, 0f, 1f);
+  //  fadeImageCanvasGroup.alpha = 1f;
+   
+  //  yield return StartCoroutine(LoadSceneAndSetActive(openingSceneName.ToString()));
+
+  //  EventHandler.CallAfterLoadSceneEvent();
+
+  //  // Restore the current scene data
+  //  SaveLoadManager.Instance.RestoreCurrentSceneData();
+
+  //  StartCoroutine(Fade(0f));
+    
+  //}
 }

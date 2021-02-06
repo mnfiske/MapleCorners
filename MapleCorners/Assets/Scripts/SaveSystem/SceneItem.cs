@@ -7,7 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public class SceneItem
 {
-  public int itemID;
+  public int itemCode;
   public string itemName;
   public Vector3Serializable location;
 
