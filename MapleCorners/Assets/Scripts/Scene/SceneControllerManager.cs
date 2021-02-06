@@ -48,46 +48,50 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
   //    //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
   //  }
   //}
-  //private IEnumerator FadeAndSwitchScenes(string sceneName, Vector3 spawnPosition)
-  //{
-  //  EventHandler.CallBeforeUnloadSceneFadeEvent();
 
-  //  yield return StartCoroutine(Fade(1f));
+  /************************************************************************************
+   ADAM: These methods should be good to go--commented them out because they rely on some methods that aren't created yet.
+  private IEnumerator FadeAndSwitchScenes(string sceneName, Vector3 spawnPosition)
+  {
+    EventHandler.CallBeforeUnloadSceneFadeEvent();
 
-  //  // Store the current scene data
-  //  SaveLoadManager.Instance.StoreCurrentSceneData();
+    yield return StartCoroutine(Fade(1f));
 
-  //  Player.Instance.gameObject.transform.position = spawnPosition;
+    // Store the current scene data
+    SaveLoadManager.Instance.StoreCurrentSceneData();
 
-  //  EventHandler.CallBeforeUnloadSceneEvent();
+    Player.Instance.gameObject.transform.position = spawnPosition;
 
-  //  yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    EventHandler.CallBeforeUnloadSceneEvent();
 
-  //  yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+    yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
-  //  EventHandler.CallAfterLoadSceneEvent();
+    yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
 
-  //  // Restore the new scene data
-  //  SaveLoadManager.Instance.RestoreCurrentSceneData();
+    EventHandler.CallAfterLoadSceneEvent();
 
-  //  yield return StartCoroutine(Fade(0f));
+    // Restore the new scene data
+    SaveLoadManager.Instance.RestoreCurrentSceneData();
 
-  //  EventHandler.CallAfterLoadSceneFadeEvent();
-  //}
-  
-  //private IEnumerator Start()
-  //{
-  //  fadeImage.color = new Color(0f, 0f, 0f, 1f);
-  //  fadeImageCanvasGroup.alpha = 1f;
-   
-  //  yield return StartCoroutine(LoadSceneAndSetActive(openingSceneName.ToString()));
+    yield return StartCoroutine(Fade(0f));
 
-  //  EventHandler.CallAfterLoadSceneEvent();
+    EventHandler.CallAfterLoadSceneFadeEvent();
+  }
 
-  //  // Restore the current scene data
-  //  SaveLoadManager.Instance.RestoreCurrentSceneData();
+  private IEnumerator Start()
+  {
+    fadeImage.color = new Color(0f, 0f, 0f, 1f);
+    fadeImageCanvasGroup.alpha = 1f;
 
-  //  StartCoroutine(Fade(0f));
-    
-  //}
+    yield return StartCoroutine(LoadSceneAndSetActive(openingSceneName.ToString()));
+
+    EventHandler.CallAfterLoadSceneEvent();
+
+    // Restore the current scene data
+    SaveLoadManager.Instance.RestoreCurrentSceneData();
+
+    StartCoroutine(Fade(0f));
+
+  }
+  */
 }
