@@ -7,6 +7,13 @@ public enum SceneName
      Scene2_Roof
 }
 
+public enum InventoryLocation
+{
+    player,
+    chest,
+    count
+}
+
 public enum ToolEffect
 {
     none,
