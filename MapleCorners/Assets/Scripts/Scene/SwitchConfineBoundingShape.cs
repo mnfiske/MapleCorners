@@ -5,14 +5,22 @@ using Cinemachine;
 
 public class SwitchConfineBoundingShape : MonoBehaviour
 {
-  // Start is called before the first frame update
-  void Start()
-  {
-    SwitchBoundingShape();
-  }
+    /*// Start is called before the first frame update
+      void Start()
+      {
+          SwitchBoundingShape();
+      }*/
+    private void OnEnable()
+    {
+        EventHandler.AfterLoadSceneEvent += SwitchBoundingShape;
+    }
+    private void OnDisable()
+    {
+        EventHandler.AfterLoadSceneEvent -= SwitchBoundingShape;
+    }
 
-  //Changes the collider that Cinemachine uses to determine the edges of the screen
-  private void SwitchBoundingShape()
+    //Changes the collider that Cinemachine uses to determine the edges of the screen
+    private void SwitchBoundingShape()
   {
     //Get the polygon collider on the bounds confiner
     PolygonCollider2D polygonCollider2D = GameObject.FindGameObjectWithTag(Tags.BoundsConfiner).GetComponent<PolygonCollider2D>();

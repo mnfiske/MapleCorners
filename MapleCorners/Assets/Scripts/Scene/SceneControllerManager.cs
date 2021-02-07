@@ -8,90 +8,108 @@ using UnityEngine.UI;
 
 public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManager>
 {
-  // Are we currently fading? Gets set to true on fade start, flase on fade finish
-  private bool isFadingActive;
-  // The amount of time, in seconds, the fade effect will last
-  [SerializeField] private float fadeLength = 1;
-  // Link to the FadeImage CanvasGroup 
-  [SerializeField] private CanvasGroup fadeImageCanvasGroup = null;
-  // Link to the actual image within the FadeImage CanvasGroup
-  [SerializeField] private Image fadeImage;
-  // The name of the scene the game starts on
-  public SceneName openingSceneName;
+    private bool isFading;
+    [SerializeField] private float fadeDuration = 1f;
+    [SerializeField] private CanvasGroup faderCanvasGroup = null;
+    [SerializeField] private Image faderImage = null;
+    // From Enum scene names
+    public SceneName startingSceneName;
 
-  /// <summary>
-  /// Fade out of the current scene and load the destination scene
-  /// </summary>
-  /// <param name="destinationName">Name of the scene to load</param>
-  /// <param name="destinationPosition">The position the player should spawn in, in the destination scene</param>
-  //private IEnumerator FadeAndTransition(string destinationName, Vector3 destinationPosition)
-  //{
-  //  // Publish that the unload scene and fade event is about to be triggered
-  //  EventHandler.CallBeforeUnloadSceneFadeEvent();
+    // Controls fading in and out
+    private IEnumerator Fade(float finalAlpha)  // finalAlpha set in Unity but probably 1
+    {
+        // set the fading flag to avoid running routine again
+        isFading = true;
 
-  //  // Fade the screen
-  //  yield return StartCoroutine(Fade(1));
+        // block input via RayCast
+        faderCanvasGroup.blocksRaycasts = true;
 
-  //  Player
-  //}
+        // Speed of fade
+        float fadeSpeed = Mathf.Abs(faderCanvasGroup.alpha - finalAlpha) / fadeDuration;
 
-  /// <summary>
-  /// Fade out of the current scene and load the destination scene
-  /// </summary>
-  /// <param name="destinationName">Name of the scene to load</param>
-  /// <param name="destinationPosition">The position the player should spawn in, in the destination scene</param>
-  //public void transitionScene(string destinationName, Vector3 destinationPosition)
-  //{
-  //  // Only call FadeAndTransition if we're not already executing a fade
-  //  if (!isFadingActive)
-  //  {
-  //    //StartCoroutine(FadeAndTransition(destinationName, destinationPosition));
-  //  }
-  //}
+        // perfrom fade
+        while(!Mathf.Approximately(faderCanvasGroup.alpha, finalAlpha))
+        {
+            faderCanvasGroup.alpha = Mathf.MoveTowards(faderCanvasGroup.alpha, finalAlpha,
+                fadeSpeed * Time.deltaTime);
 
-  /************************************************************************************
-   ADAM: These methods should be good to go--commented them out because they rely on some methods that aren't created yet.
-  private IEnumerator FadeAndSwitchScenes(string sceneName, Vector3 spawnPosition)
-  {
-    EventHandler.CallBeforeUnloadSceneFadeEvent();
+            // Wait for next frame
+            yield return null;
+        }
 
-    yield return StartCoroutine(Fade(1f));
+        // Set flag and remove blocking
+        isFading = false;
+        faderCanvasGroup.blocksRaycasts = false;
+    }
 
-    // Store the current scene data
-    SaveLoadManager.Instance.StoreCurrentSceneData();
+    // Coroutine for fading
+    private IEnumerator FadeAndSwitchScenes(string sceneName, Vector3 spawnPosition)
+    {
+        // Call before scene unload fade out event
+        EventHandler.CallBeforeSceneUnloadFadeOutEvent();
 
-    Player.Instance.gameObject.transform.position = spawnPosition;
+        // Start fading to black
+        yield return StartCoroutine(Fade(1f));
 
-    EventHandler.CallBeforeUnloadSceneEvent();
+        // Set Player Position
+        Player.Instance.gameObject.transform.position = spawnPosition;
 
-    yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        // Call before scene unload event
+        EventHandler.CallBeforeSceneUnloadEvent();
 
-    yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
+        // Unload current scene - asynchronis to avoid game freezing
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
-    EventHandler.CallAfterLoadSceneEvent();
+        // Start loading the given scene
+        yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
 
-    // Restore the new scene data
-    SaveLoadManager.Instance.RestoreCurrentSceneData();
+        // call after scene load event
+        EventHandler.CallAfterSceneLoadEvent();
 
-    yield return StartCoroutine(Fade(0f));
+        // Start fade in
+        yield return StartCoroutine(Fade(0f));
 
-    EventHandler.CallAfterLoadSceneFadeEvent();
-  }
+        // Call after scene load fade in event
+        EventHandler.CallAfterSceneLoadFadeInEvent();
+    }
 
-  private IEnumerator Start()
-  {
-    fadeImage.color = new Color(0f, 0f, 0f, 1f);
-    fadeImageCanvasGroup.alpha = 1f;
+    private IEnumerator LoadSceneAndSetActive(string sceneName)
+    {
+        // Load game and add to already loaded scene (persistent scene)
+        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 
-    yield return StartCoroutine(LoadSceneAndSetActive(openingSceneName.ToString()));
+        // Find the  scene that was recently loaded
+        Scene newlyLoadedScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
 
-    EventHandler.CallAfterLoadSceneEvent();
+        // Set the newly loaded scene as active
+        SceneManager.SetActiveScene(newlyLoadedScene);
+    }
 
-    // Restore the current scene data
-    SaveLoadManager.Instance.RestoreCurrentSceneData();
+    private IEnumerator Start()
+    {
+        // set the initial alpha to start fully black
+        faderImage.color = new Color(0f, 0f, 0f, 1f);
+        faderCanvasGroup.alpha = 1f;
 
-    StartCoroutine(Fade(0f));
+        // Begin loading first scene
+        yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName.ToString()));
 
-  }
-  */
+        // Call events for subscribers
+        EventHandler.CallAfterSceneLoadEvent();
+
+        // Start Fade in
+        StartCoroutine(Fade(0f));
+    }
+
+    // This is the main external point of contact and influence from the rest of the project
+    // this will be called when the player wants to switch scenes.
+    public void FadeAndLoadScene(string sceneName, Vector3 spawnPosition)
+    {
+        // If a fade isn't happening then start fading and switching scenes
+        if(!isFading)
+        {
+            StartCoroutine(FadeAndSwitchScenes(sceneName, spawnPosition));
+        }
+    }
+    
 }

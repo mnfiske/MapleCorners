@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace DialogueSystem
 {
@@ -20,6 +21,9 @@ namespace DialogueSystem
             }
             // Deactivate holder when completed
             gameObject.SetActive(false);
+
+            // Loads next scene in Queue
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         private void Deactivate()
