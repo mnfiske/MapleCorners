@@ -7,6 +7,10 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     // dictionary to hold items in scriptable object list
     private Dictionary<int, ItemDetails> itemDetailsDictionary;
 
+    public List<InventoryItem>[] inventoryLists;
+
+    [HideInInspector] public int[] inventoryListCapacityIntArray;
+
     [SerializeField] private SO_ItemList itemList = null;
 
     // awake occurs before start, ensures that Item Details Dictionary will be created first
@@ -14,8 +18,24 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     {
         base.Awake(); //ensures that awake in singletonmono still runs
 
+        CreateInventoryLists();
+
         // create dictionary
         CreateItemDetailsDictionary();
+    }
+
+    private void CreateInventoryLists()
+    {
+        inventoryLists = new List<InventoryItem>[(int)InventoryLocation.count];
+
+        for (int i = 0; i < (int)InventoryLocation.count; i++)
+        {
+            inventoryLists[i] = new List<InventoryItem>();
+        }
+
+        inventoryListCapacityIntArray = new int[(int)InventoryLocation.count];
+
+        inventoryListCapacityIntArray[(int)InventoryLocation.player] = Settings.playerInitialInventoryCapacity;
     }
 
     /// <summary>
@@ -30,6 +50,76 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         {
             itemDetailsDictionary.Add(itemDetails.itemCode, itemDetails);
         }
+    }
+
+    /// Add an item to the inventory list for the inventoryLocation and then destroy the gameObjectToDelete
+    public void AddItem(InventoryLocation inventoryLocation, Item item, GameObject gameObjectToDelete)
+    {
+        AddItem(inventoryLocation, item);
+
+        Destroy(gameObjectToDelete);
+    }
+
+    /// Add an item to the inventory list for the inventoryLocation
+    public void AddItem(InventoryLocation inventoryLocation, Item item)
+    {
+        int itemCode = item.ItemCode;
+        List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
+
+        // Check if item is already in inventory
+        int itemPosition = FindItemInInventory(inventoryLocation, itemCode);
+
+        if (itemPosition != -1)
+        {
+            AddItemAtPosition(inventoryList, itemCode, itemPosition);
+        }
+        else
+        {
+            AddItemAtPosition(inventoryList, itemCode);
+        }
+
+        //  Send event that inventory has been updated
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
+    }
+    
+    /// Checks inventory for item. Returns the item position
+    /// or -1 if the item is not in the inventory
+    public int FindItemInInventory(InventoryLocation inventoryLocation, int itemCode)
+    {
+        List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
+
+        for (int i = 0; i < inventoryList.Count; i++)
+        {
+            if (inventoryList[i].itemCode == itemCode)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    /// Add item to the end of the inventory
+    private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
+    {
+        InventoryItem inventoryItem = new InventoryItem();
+
+        inventoryItem.itemCode = itemCode;
+        inventoryItem.itemQuantity = 1;
+        inventoryList.Add(inventoryItem);
+
+        DebugPrintInventoryList(inventoryList);
+    }
+
+    /// Add item to position in the inventory
+    private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
+    {
+        InventoryItem inventoryItem = new InventoryItem();
+
+        int quantity = inventoryList[position].itemQuantity + 1;
+        inventoryItem.itemQuantity = quantity;
+        inventoryItem.itemCode = itemCode;
+        inventoryList[position] = inventoryItem;
     }
 
     /// <summary
@@ -49,4 +139,15 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
             return null;
         }
     }
+
+    // print inventory items to console for debugging
+    private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
+    {
+        foreach (InventoryItem inventoryItem in inventoryList)
+        {
+            Debug.Log("Item Description:" + InventoryManager.Instance.GetItemDetails(inventoryItem.itemCode).itemDescription + "    Item Quantity: " + inventoryItem.itemQuantity);
+        }
+        Debug.Log("****************************************************************");
+    }
+
 }

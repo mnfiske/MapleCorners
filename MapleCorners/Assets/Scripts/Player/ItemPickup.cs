@@ -13,8 +13,11 @@ public class ItemPickup : MonoBehaviour
             // get item details from manager
             ItemDetails itemDetails = InventoryManager.Instance.GetItemDetails(item.ItemCode);
 
-            // Validate - print description in console if there is a collision with item
-            Debug.Log(itemDetails.itemDescription);
+            // if item can be picked up, add it to inventory
+            if(itemDetails.canBePickedUp ==true)
+            {
+                InventoryManager.Instance.AddItem(InventoryLocation.player, item, collision.gameObject);
+            }
         }
     }
 }
