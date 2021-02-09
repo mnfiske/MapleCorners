@@ -140,7 +140,8 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         }
     }
 
-    // print inventory items to console for debugging
+    //print inventory items to console for debugging
+    //commented out now that invetory bar UI updates with items that are picked up
     private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
     {
         foreach (InventoryItem inventoryItem in inventoryList)

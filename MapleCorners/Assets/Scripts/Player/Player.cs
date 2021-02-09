@@ -31,6 +31,9 @@ public class Player : SingletonMonoBehavior<Player>
     private bool idleUp;
     private bool idleDown;
 
+    private Camera mainCamera;
+
+
     private Rigidbody2D rigidBody2D;
 
     private Direction playerDirection;
@@ -47,6 +50,9 @@ public class Player : SingletonMonoBehavior<Player>
         base.Awake();
 
         rigidBody2D = GetComponent<Rigidbody2D>();
+
+        //references the main camera
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -173,6 +179,11 @@ public class Player : SingletonMonoBehavior<Player>
             isIdle = false;
             movementSpeed = Settings.runningSpeed;
         }
+    }
+
+  public Vector3 GetPlayerViewportPosition()
+    {
+        return mainCamera.WorldToViewportPoint(transform.position);
     }
 
   #region Test Methods
