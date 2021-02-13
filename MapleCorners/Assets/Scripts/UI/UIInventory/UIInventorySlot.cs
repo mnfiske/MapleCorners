@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
+public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Camera mainCamera;
     private Transform parentItem;
@@ -22,6 +22,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private GameObject itemPrefab = null;
     [HideInInspector] public ItemDetails itemDetails;
     [HideInInspector] public int itemQuantity;
+    [HideInInspector] public bool isSelected = false;
 
     [SerializeField] private int slotNumber = 0;
 
@@ -34,6 +35,36 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         mainCamera = Camera.main;
         gridCursor = FindObjectOfType<GridCursor>();
+    }
+
+    private void SetSelectedItem()
+    {
+        // Clear currently highlighted items
+        inventoryBar.ClearHighlightOnInventorySlots();
+
+        // Highlight item on inventory bar
+        isSelected = true;
+
+        // Set highlighted inventory slots
+        inventoryBar.SetHighlightedInventorySlots();
+
+        // Set item selected in inventory
+        InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
+
+    }
+
+
+    public void ClearSelectedItem()
+    {
+        ClearCursors();
+
+        // Clear currently highlighted items
+        inventoryBar.ClearHighlightOnInventorySlots();
+
+        isSelected = false;
+
+        // set no item selected in inventory
+        InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
     }
 
     private void OnDisable()
@@ -63,8 +94,11 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             Image draggedItemImage = draggedItem.GetComponentInChildren<Image>();
             draggedItemImage.sprite = inventorySlotImage.sprite;
 
+            SetSelectedItem();
+
         }
     }
+
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -89,6 +123,8 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 InventoryManager.Instance.SwapInventoryItems(InventoryLocation.player, slotNumber, toSlotNumber);
 
                 DestroyInventoryTextBox();
+
+                ClearSelectedItem();
             }
             // if the drag ends over the scene
             else
@@ -107,7 +143,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
   private void DropSelectedItemAtMousePosition()
   {
-    if (itemDetails != null)
+    if (itemDetails != null && isSelected)
     {
       Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
 
@@ -119,9 +155,34 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
       // Remove item from players inventory
       InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
 
+      // check if there are any items left, if not clear the selected item
+      if(InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+            {
+                ClearSelectedItem();
+            }
+
     }
   }
-
+    // looking for left clicks
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // if left click
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            // if currently selected then deselect
+            if (isSelected == true)
+            {
+                ClearSelectedItem();
+            }
+            else
+            {
+                if (itemQuantity > 0)
+                {
+                    SetSelectedItem();
+                }
+            }
+        }
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
