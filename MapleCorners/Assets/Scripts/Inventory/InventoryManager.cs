@@ -27,6 +27,14 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
 
         // create dictionary
         CreateItemDetailsDictionary();
+
+        // Create new array for selected item
+        selectedInventoryItem = new int[(int)InventoryLocation.count];
+
+        for (int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1;
+        }
     }
 
     private void CreateInventoryLists()
@@ -72,6 +80,11 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
             // send inventory update event
             EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
         }
+    }
+
+    public void ClearSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1;
     }
 
     /// Add an item to the inventory list for the inventoryLocation and then destroy the gameObjectToDelete
@@ -264,6 +277,11 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         {
             inventoryList.RemoveAt(position);
         }
+    }
+
+    public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = itemCode;
     }
 
     //print inventory items to console for debugging
