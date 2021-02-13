@@ -12899,231 +12899,6 @@ MonoBehaviour:
     GridBoolProperty: 1
     GridBoolValue: 1
   - GridCoordinate:
-      X: -29
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -28
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -27
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -26
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -25
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -24
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -23
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -22
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -21
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -20
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -19
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -18
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -17
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -16
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -15
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -12
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -11
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -10
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -9
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -8
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -7
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -6
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -5
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 5
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 6
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 7
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 8
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 9
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 10
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 11
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 12
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -29
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -28
       Y: -28
     GridBoolProperty: 0
@@ -13250,46 +13025,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -28
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -13331,16 +13066,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -28
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -28
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -13470,46 +13195,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -27
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -13551,16 +13236,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -27
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -27
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -13690,46 +13365,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -26
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -13771,16 +13406,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -26
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -26
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -13910,46 +13535,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -25
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -13991,16 +13576,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -25
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -25
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -14130,46 +13705,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -24
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -14211,16 +13746,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -24
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -24
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -23
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -14350,21 +13875,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -23
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -23
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -23
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -23
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -14409,16 +13919,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -23
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -22
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -22
       Y: -28
     GridBoolProperty: 0
@@ -14545,21 +14045,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -22
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -22
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -22
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -22
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -14601,16 +14086,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -22
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -22
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -21
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -14740,21 +14215,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -21
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -21
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -21
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -21
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -14799,16 +14259,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -21
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -20
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -20
       Y: -28
     GridBoolProperty: 0
@@ -14935,21 +14385,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -20
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -20
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -20
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -20
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -14994,16 +14429,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -20
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -19
       Y: -28
     GridBoolProperty: 0
@@ -15130,46 +14555,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -19
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -15211,16 +14596,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -19
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -19
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -15350,46 +14725,6 @@ MonoBehaviour:
     GridBoolValue: 1
   - GridCoordinate:
       X: -18
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
       Y: 5
     GridBoolProperty: 0
     GridBoolValue: 1
@@ -15431,16 +14766,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -18
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -18
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -17
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -15654,16 +14979,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -17
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -16
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -16
       Y: -28
     GridBoolProperty: 0
@@ -15871,16 +15186,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -16
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -16
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -15
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -16094,16 +15399,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -15
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -14
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -14
       Y: -28
     GridBoolProperty: 0
@@ -16311,16 +15606,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -14
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -14
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -13
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -16534,16 +15819,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -13
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -12
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -12
       Y: -28
     GridBoolProperty: 0
@@ -16751,16 +16026,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -12
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -12
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -11
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -16974,16 +16239,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -11
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -10
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -10
       Y: -28
     GridBoolProperty: 0
@@ -17191,16 +16446,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -10
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -10
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -9
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -17414,16 +16659,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -9
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -8
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -8
       Y: -28
     GridBoolProperty: 0
@@ -17631,16 +16866,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -8
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -8
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -7
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -17854,16 +17079,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -7
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -6
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -6
       Y: -28
     GridBoolProperty: 0
@@ -18071,16 +17286,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -6
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -6
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -5
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -18294,16 +17499,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -5
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -4
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -4
       Y: -28
     GridBoolProperty: 0
@@ -18511,16 +17706,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -4
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -4
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -3
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -18734,16 +17919,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -3
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -2
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: -2
       Y: -28
     GridBoolProperty: 0
@@ -18951,16 +18126,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: -2
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -2
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: -1
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -19174,16 +18339,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: -1
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 0
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 0
       Y: -28
     GridBoolProperty: 0
@@ -19391,16 +18546,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 0
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 0
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 1
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -19614,16 +18759,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 1
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 2
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 2
       Y: -28
     GridBoolProperty: 0
@@ -19831,16 +18966,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 2
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 2
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 3
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -20054,16 +19179,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 3
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 4
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 4
       Y: -28
     GridBoolProperty: 0
@@ -20271,16 +19386,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 4
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 4
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 5
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -20494,16 +19599,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 5
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 6
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 6
       Y: -28
     GridBoolProperty: 0
@@ -20711,16 +19806,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 6
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 6
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 7
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -20934,16 +20019,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 7
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 8
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 8
       Y: -28
     GridBoolProperty: 0
@@ -21151,16 +20226,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 8
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 8
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 9
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -21374,16 +20439,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 9
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 10
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 10
       Y: -28
     GridBoolProperty: 0
@@ -21591,16 +20646,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 10
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 10
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 11
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -21814,16 +20859,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 11
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 12
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 12
       Y: -28
     GridBoolProperty: 0
@@ -22031,16 +21066,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 12
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 12
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 13
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -22254,16 +21279,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 13
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 14
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 14
       Y: -28
     GridBoolProperty: 0
@@ -22471,16 +21486,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 14
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 14
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 15
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -22694,16 +21699,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 15
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 16
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 16
       Y: -28
     GridBoolProperty: 0
@@ -22911,16 +21906,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 16
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 16
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 17
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -23134,16 +22119,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 17
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 18
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 18
       Y: -28
     GridBoolProperty: 0
@@ -23351,16 +22326,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 18
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 18
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 19
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -23574,16 +22539,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 19
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 20
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 20
       Y: -28
     GridBoolProperty: 0
@@ -23791,16 +22746,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 20
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 20
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 21
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -24014,16 +22959,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 21
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 22
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 22
       Y: -28
     GridBoolProperty: 0
@@ -24231,16 +23166,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 22
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 22
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 23
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -24454,16 +23379,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 23
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 24
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 24
       Y: -28
     GridBoolProperty: 0
@@ -24671,16 +23586,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 24
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 24
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 25
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -24894,16 +23799,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 25
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 26
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 26
       Y: -28
     GridBoolProperty: 0
@@ -25111,16 +24006,6 @@ MonoBehaviour:
   - GridCoordinate:
       X: 26
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 26
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 27
-      Y: -29
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
@@ -25334,16 +24219,6 @@ MonoBehaviour:
     GridBoolProperty: 0
     GridBoolValue: 1
   - GridCoordinate:
-      X: 27
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 28
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
       X: 28
       Y: -28
     GridBoolProperty: 0
@@ -25551,230 +24426,5 @@ MonoBehaviour:
   - GridCoordinate:
       X: 28
       Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 28
-      Y: 14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -29
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -28
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -27
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -26
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -25
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -24
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -23
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -22
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -21
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -20
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -19
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -18
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -17
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -16
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -15
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -14
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -12
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -11
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -10
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -9
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -8
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -7
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -6
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -5
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: -1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 0
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 1
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 2
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 3
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 4
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 5
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 6
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 7
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 8
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 9
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 10
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 11
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 12
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 13
-    GridBoolProperty: 0
-    GridBoolValue: 1
-  - GridCoordinate:
-      X: 29
-      Y: 14
     GridBoolProperty: 0
     GridBoolValue: 1
