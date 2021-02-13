@@ -15,6 +15,17 @@ public delegate void MovementDelegate(float inputX, float inputY, bool isWalking
 
 public static class EventHandler
 {
+  public static event Action DropSelectedItemEvent;
+
+  /// <summary>
+  /// Calls the DropSelectedItemEvent
+  /// </summary>
+  public static void CallDropSelectedItemEvent()
+  {
+    if (DropSelectedItemEvent != null)
+      DropSelectedItemEvent();
+  }
+
   public static event Action<InventoryLocation, List<InventoryItem>> InventoryUpdatedEvent;
 
   public static void CallInventoryUpdatedEvent(InventoryLocation inventoryLocation, List<InventoryItem> inventoryList)

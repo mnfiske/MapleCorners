@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿// "Citation: Unity 2D Game Developer Course Farming RPG"
+
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine;
@@ -7,6 +9,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     private Camera mainCamera;
     private Transform parentItem;
+    private GridCursor gridCursor;
     private GameObject draggedItem;
     private Canvas parentCanvas;
 
@@ -30,17 +33,19 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void Start()
     {
         mainCamera = Camera.main;
-
+        gridCursor = FindObjectOfType<GridCursor>();
     }
 
     private void OnDisable()
     {
         EventHandler.AfterSceneLoadEvent -= SceneLoaded;
+        EventHandler.DropSelectedItemEvent -= DropSelectedItemAtMousePosition;
     }
 
     private void OnEnable()
     {
         EventHandler.AfterSceneLoadEvent += SceneLoaded;
+        EventHandler.DropSelectedItemEvent += DropSelectedItemAtMousePosition;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -100,22 +105,23 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-    private void DropSelectedItemAtMousePosition()
+  private void DropSelectedItemAtMousePosition()
+  {
+    if (itemDetails != null)
     {
-        if (itemDetails != null)
-        {
-                Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+      Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
 
-            // Create item from prefab
-                GameObject itemGameObject = Instantiate(itemPrefab, worldPosition, Quaternion.identity, parentItem);
-                Item item = itemGameObject.GetComponent<Item>();
-                item.ItemCode = itemDetails.itemCode;
+      // Create item from prefab
+      GameObject itemGameObject = Instantiate(itemPrefab, worldPosition, Quaternion.identity, parentItem);
+      Item item = itemGameObject.GetComponent<Item>();
+      item.ItemCode = itemDetails.itemCode;
 
-                // Remove item from players inventory
-                InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
-                
-        }
+      // Remove item from players inventory
+      InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+
     }
+  }
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -162,8 +168,18 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-    public void SceneLoaded()
+  public void SceneLoaded()
     {
         parentItem = GameObject.FindGameObjectWithTag(Tags.ItemsParentTransform).transform;
+    }
+
+    /// <summary>
+    /// Disables the gridCuror & sets its SelectedItemType to none
+    /// </summary>
+    private void ClearCursors()
+    {
+      gridCursor.DisableCursor();
+
+      gridCursor.SelectedItemType = ItemType.none;
     }
 }

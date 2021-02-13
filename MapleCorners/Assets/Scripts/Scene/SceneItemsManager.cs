@@ -151,8 +151,7 @@ public class SceneItemsManager : SingletonMonoBehavior<SceneItemsManager>, ISave
 
     // Save our scene item list to our sceneItemDict dictionary
     SceneSave sceneSave = new SceneSave();
-    sceneSave.sceneItemDict = new Dictionary<string, List<SceneItem>>();
-    sceneSave.sceneItemDict.Add("sceneItems", sceneItems);
+    sceneSave.ListSceneItem = sceneItems;
 
     // Add our data to the SceneData dictionary
     GameObjectSave.SceneData.Add(name, sceneSave);
@@ -170,7 +169,7 @@ public class SceneItemsManager : SingletonMonoBehavior<SceneItemsManager>, ISave
       // We found a dictionary item for this scene
 
       // Checks if the found dictionary items contains a sceneItemDict field & if that field exists tries to get the sceneItems list
-      if (sceneSave.sceneItemDict != null && sceneSave.sceneItemDict.TryGetValue("sceneItems", out List<SceneItem> sceneItems))
+      if (sceneSave.ListSceneItem != null)
       {
         // We got the sceneItems list
 
@@ -178,7 +177,7 @@ public class SceneItemsManager : SingletonMonoBehavior<SceneItemsManager>, ISave
         DestroySceneItems();
 
         // Instantiate all the items in the sceneItems list
-        instantiateSceneItems(sceneItems);
+        instantiateSceneItems(sceneSave.ListSceneItem);
       }
     }
   }
