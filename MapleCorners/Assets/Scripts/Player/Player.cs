@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿// "Citation: Unity 2D Game Developer Course Farming RPG"
+
+using UnityEngine;
 
 public class Player : SingletonMonoBehavior<Player>
 {
+    private GridCursor gridCursor;
     // Movement Parameters from player animation
     private float inputX;
     private float inputY;
@@ -55,7 +58,12 @@ public class Player : SingletonMonoBehavior<Player>
         mainCamera = Camera.main;
     }
 
-    private void Update()
+    private void Start()
+    {
+      gridCursor = FindObjectOfType<GridCursor>();
+    }
+
+  private void Update()
     {
         #region Player Input
 
@@ -67,6 +75,8 @@ public class Player : SingletonMonoBehavior<Player>
             PlayerMovementInput();
 
             PlayerWalkInput();
+
+            PlayerClickInput();
 
             //Remove!
             PlayerTestInput();
@@ -184,14 +194,78 @@ public class Player : SingletonMonoBehavior<Player>
         }
     }
 
-    public void ResetMovement()
+
+    private void PlayerClickInput()
     {
-        inputX = 0f;
-        inputY = 0f;
-        isRunning = false;
-        isWalking = false;
-        isIdle = true;
+      if (Input.GetMouseButton(0))
+      {
+        if (gridCursor.CursorIsEnabled)
+        {
+          ProcessPlayerClickInput();
+        }
+      }
     }
+
+    private void ProcessPlayerClickInput()
+    {
+      ResetMovement();
+
+      ItemDetails itemDetails = InventoryManager.Instance.GetSelectedInventoryItemDetails(InventoryLocation.player);
+
+      if (itemDetails != null)
+      {
+        switch (itemDetails.itemType)
+        {
+          case ItemType.Seed:
+            if (Input.GetMouseButtonDown(0))
+            {
+              ProcessPlayerClickInputSeed(itemDetails);
+            }
+            break;
+
+          case ItemType.Commodity:
+            if (Input.GetMouseButtonDown(0))
+            {
+              ProcessPlayerClickInputCommodity(itemDetails);
+            }
+            break;
+
+          case ItemType.none:
+            break;
+
+          case ItemType.count:
+            break;
+
+          default:
+            break;
+        }
+      }
+    }
+
+    private void ProcessPlayerClickInputSeed(ItemDetails itemDetails)
+    {
+        if (itemDetails.canBeDropped && gridCursor.CursorPositionIsValid)
+        {
+            EventHandler.CallDropSelectedItemEvent();
+        }
+    }
+
+    private void ProcessPlayerClickInputCommodity(ItemDetails itemDetails)
+    {
+        if (itemDetails.canBeDropped && gridCursor.CursorPositionIsValid)
+        {
+            EventHandler.CallDropSelectedItemEvent();
+        }
+    }
+
+    public void ResetMovement()
+      {
+          inputX = 0f;
+          inputY = 0f;
+          isRunning = false;
+          isWalking = false;
+          isIdle = true;
+      }
 
     public void DisablePlayerInputAndResetMovement()
     {
