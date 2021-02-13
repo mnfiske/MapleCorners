@@ -68,3 +68,11 @@ public enum Weekday
   Sat
 }
 
+public enum GridBoolProperty
+{
+  diggable,
+  canDropItem,
+  canPlaceFurniture,
+  isPath,               // Stub for future release NPC path finding
+  isNPCObstacle,        // Stub for future release NPC path finding
+}
