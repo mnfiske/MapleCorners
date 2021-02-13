@@ -48,6 +48,22 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // Set highlighted inventory slots
         inventoryBar.SetHighlightedInventorySlots();
 
+        // Store the item's use radius for the gird cursor
+        gridCursor.ItemUseGridRadius = itemDetails.itemUseGridRadius;
+
+        // If the item's itemUseGridRadius is greater than 0 we want to enable the grid cursor, else disable it
+        if (itemDetails.itemUseGridRadius > 0)
+        {
+            gridCursor.EnableCursor();
+        }
+        else
+        {
+            gridCursor.DisableCursor();
+        }
+
+        // Set the grid cursor's SelectedItemType to the item's itemType
+        gridCursor.SelectedItemType = itemDetails.itemType;
+
         // Set item selected in inventory
         InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
 
@@ -141,28 +157,31 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
-  private void DropSelectedItemAtMousePosition()
-  {
-    if (itemDetails != null && isSelected)
+    private void DropSelectedItemAtMousePosition()
     {
-      Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+        if (itemDetails != null && isSelected)
+        {
 
-      // Create item from prefab
-      GameObject itemGameObject = Instantiate(itemPrefab, worldPosition, Quaternion.identity, parentItem);
-      Item item = itemGameObject.GetComponent<Item>();
-      item.ItemCode = itemDetails.itemCode;
-
-      // Remove item from players inventory
-      InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
-
-      // check if there are any items left, if not clear the selected item
-      if(InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+            if (gridCursor.CursorPositionIsValid)
             {
-                ClearSelectedItem();
-            }
+                Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+                
+                // Create item from prefab
+                GameObject itemGameObject = Instantiate(itemPrefab, worldPosition, Quaternion.identity, parentItem);
+                Item item = itemGameObject.GetComponent<Item>();
+                item.ItemCode = itemDetails.itemCode;
 
+                // Remove item from players inventory
+                InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+
+                // check if there are any items left, if not clear the selected item
+                if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+                {
+                    ClearSelectedItem();
+                }
+            }
+        }
     }
-  }
     // looking for left clicks
     public void OnPointerClick(PointerEventData eventData)
     {
