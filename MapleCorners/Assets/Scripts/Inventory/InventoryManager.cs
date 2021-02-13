@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿// "Citation: Unity 2D Game Developer Course Farming RPG"
+
+using System.Collections.Generic;
 using UnityEngine;
 
 // Inherits from Abstract class of game object
@@ -8,6 +10,9 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     private Dictionary<int, ItemDetails> itemDetailsDictionary;
 
     public List<InventoryItem>[] inventoryLists;
+
+    // An array of item codes representing the inventory
+    private int[] selectedInventoryItem;
 
     [HideInInspector] public int[] inventoryListCapacityIntArray;
 
@@ -157,6 +162,7 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         }
     }
 
+
     // get the item type name in order to populate the text box
     public string GetItemTypeDescription(ItemType itemType)
     {
@@ -195,7 +201,37 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         return itemTypeDescription;
     }
 
-    public void RemoveItem(InventoryLocation inventoryLocation, int itemCode)
+    /// <summary>
+    /// Returns the item code for the item at the passed in inventory location
+    /// </summary>
+    /// <param name="inventoryLocation"></param>
+    /// <returns></returns>
+    private int GetSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+      return selectedInventoryItem[(int)inventoryLocation];
+    }
+
+    /// <summary>
+    /// Returns the ItemDetails for the item at the passed in inventory location
+    /// </summary>
+    /// <param name="inventoryLocation"></param>
+    /// <returns></returns>
+    public ItemDetails GetSelectedInventoryItemDetails(InventoryLocation inventoryLocation)
+    {
+      int itemCode = GetSelectedInventoryItem(inventoryLocation);
+
+      if (itemCode == -1)
+      {
+        return null;
+      }
+      else
+      {
+        return GetItemDetails(itemCode);
+      }
+    }
+
+  public void RemoveItem(InventoryLocation inventoryLocation, int itemCode)
+
     {
         List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
 
