@@ -468,7 +468,7 @@ public class Player : SingletonMonoBehavior<Player>
         GridPropertiesManager.Instance.SetGridPropertyDetails(gridPropertyDetails.GridX, gridPropertyDetails.GridY, gridPropertyDetails);
 
         // Update the tile display
-        //GridPropertiesManager.Instance.DisplayWateredGround(gridPropertyDetails);
+        GridPropertiesManager.Instance.DisplayWateredGround(gridPropertyDetails);
 
         // Pause
         yield return afterLiftToolAnimationPause;

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Linq;
 
 [RequireComponent(typeof(GenerateGuid))]
 public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager>, ISaveable
@@ -21,6 +22,7 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
     /// </summary>
     [SerializeField] private SO_GridProperties[] so_gridPropertiesArray = null;
     [SerializeField] private Tile[] dugGround = null;
+    [SerializeField] private Tile[] wateredGround = null;
 
     /// <summary>
     /// Unique ID property
@@ -49,7 +51,7 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
         ISaveableRegister();
 
         EventHandler.AfterSceneLoadEvent += AfterSceneLoaded;
-        //EventHandler.AdvanceGameDayEvent += AdvanceDay;
+        EventHandler.AdvanceGameDayEvent += AdvanceDay;
     }
 
     private void OnDisable()
@@ -57,7 +59,7 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
         ISaveableDeregister();
 
         EventHandler.AfterSceneLoadEvent -= AfterSceneLoaded;
-        //EventHandler.AdvanceGameDayEvent -= AdvanceDay;
+        EventHandler.AdvanceGameDayEvent -= AdvanceDay;
     }
 
     public void ISaveableDeregister()
@@ -116,7 +118,7 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
     }
 
     /// <summary>
-    /// 
+    /// Set the tiles to make dug ground appear to be connected with dug ground surrounding it
     /// </summary>
     /// <param name="gridPropertyDetails"></param>
     private void ConnectDugGround(GridPropertyDetails gridPropertyDetails)
@@ -270,6 +272,176 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
     }
 
     /// <summary>
+    /// If the ground has been watered, call ConnectWateredGround
+    /// </summary>
+    /// <param name="gridPropertyDetails"></param>
+    public void DisplayWateredGround(GridPropertyDetails gridPropertyDetails)
+    {
+        if (gridPropertyDetails.DaysSinceWatered > -1)
+        {
+            ConnectWateredGround(gridPropertyDetails);
+        }
+    }
+
+    /// <summary>
+    /// Set the tiles to make watered ground appear to be connected with watered ground surrounding it
+    /// </summary>
+    /// <param name="gridPropertyDetails"></param>
+    private void ConnectWateredGround(GridPropertyDetails gridPropertyDetails)
+    {
+        // Determine which tile should be set based on the surrounding tiles
+        Tile wateredTile0 = SetWateredTile(gridPropertyDetails.GridX, gridPropertyDetails.GridY);
+        //Set the tile
+        floorDecoration2.SetTile(new Vector3Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY, 0), wateredTile0);
+
+        GridPropertyDetails adjacentGridPropertyDetails;
+
+        // Check the tile above the current tile--is it also watered ground?
+        adjacentGridPropertyDetails = GetGridPropertyDetails(gridPropertyDetails.GridX, gridPropertyDetails.GridY + 1);
+        if (adjacentGridPropertyDetails != null && adjacentGridPropertyDetails.DaysSinceWatered > -1)
+        {
+            // If so, we need to determine which tile should be set based on the surrounding tiles
+            Tile wateredTile1 = SetWateredTile(gridPropertyDetails.GridX, gridPropertyDetails.GridY + 1);
+            // Set the tile
+            floorDecoration2.SetTile(new Vector3Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY + 1, 0), wateredTile1);
+        }
+        // Check the tile below the current tile--is it also watered ground?
+        adjacentGridPropertyDetails = GetGridPropertyDetails(gridPropertyDetails.GridX, gridPropertyDetails.GridY - 1);
+        if (adjacentGridPropertyDetails != null && adjacentGridPropertyDetails.DaysSinceWatered > -1)
+        {
+            // If so, we need to determine which tile should be set based on the surrounding tiles
+            Tile wateredTile2 = SetWateredTile(gridPropertyDetails.GridX, gridPropertyDetails.GridY - 1);
+            // Set the tile
+            floorDecoration2.SetTile(new Vector3Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY - 1, 0), wateredTile2);
+        }
+        // Check the tile to the left of the current tile--is it also watered ground?
+        adjacentGridPropertyDetails = GetGridPropertyDetails(gridPropertyDetails.GridX - 1, gridPropertyDetails.GridY);
+        if (adjacentGridPropertyDetails != null && adjacentGridPropertyDetails.DaysSinceWatered > -1)
+        {
+            // If so, we need to determine which tile should be set based on the surrounding tiles
+            Tile wateredTile3 = SetWateredTile(gridPropertyDetails.GridX - 1, gridPropertyDetails.GridY);
+            // Set the tile
+            floorDecoration2.SetTile(new Vector3Int(gridPropertyDetails.GridX - 1, gridPropertyDetails.GridY, 0), wateredTile3);
+        }
+        // Check the tile to the right of the current tile--is it also watered ground?
+        adjacentGridPropertyDetails = GetGridPropertyDetails(gridPropertyDetails.GridX + 1, gridPropertyDetails.GridY);
+        if (adjacentGridPropertyDetails != null && adjacentGridPropertyDetails.DaysSinceWatered > -1)
+        {
+            // If so, we need to determine which tile should be set based on the surrounding tiles
+            Tile wateredTile4 = SetWateredTile(gridPropertyDetails.GridX + 1, gridPropertyDetails.GridY);
+            // Set the tile
+            floorDecoration2.SetTile(new Vector3Int(gridPropertyDetails.GridX + 1, gridPropertyDetails.GridY, 0), wateredTile4);
+        }
+    }
+
+    /// <summary>
+    /// Returns the watered ground tile that should be set based on the state of the surrounding tiles
+    /// </summary>
+    /// <param name="xGrid"></param>
+    /// <param name="yGrid"></param>
+    /// <returns></returns>
+    private Tile SetWateredTile(int xGrid, int yGrid)
+    {
+        // Store whether the squares adjacent to the passed in coordinates have been watered
+        bool upWatered = IsGridSquareWatered(xGrid, yGrid + 1);
+        bool downWatered = IsGridSquareWatered(xGrid, yGrid - 1);
+        bool leftWatered = IsGridSquareWatered(xGrid - 1, yGrid);
+        bool rightWatered = IsGridSquareWatered(xGrid + 1, yGrid);
+
+        // Return which tile should be applied to the grid square based on the state of the surrounding tiles
+        if (!upWatered && !downWatered && !rightWatered && !leftWatered)
+        {
+            return wateredGround[0];
+        }
+        else if (!upWatered && downWatered && rightWatered && !leftWatered)
+        {
+            return wateredGround[1];
+        }
+        else if (!upWatered && downWatered && rightWatered && leftWatered)
+        {
+            return wateredGround[2];
+        }
+        else if (!upWatered && downWatered && !rightWatered && leftWatered)
+        {
+            return wateredGround[3];
+        }
+        else if (!upWatered && downWatered && !rightWatered && !leftWatered)
+        {
+            return wateredGround[4];
+        }
+        else if (upWatered && downWatered && rightWatered && !leftWatered)
+        {
+            return wateredGround[5];
+        }
+        else if (upWatered && downWatered && rightWatered && leftWatered)
+        {
+            return wateredGround[6];
+        }
+        else if (upWatered && downWatered && !rightWatered && leftWatered)
+        {
+            return wateredGround[7];
+        }
+        else if (upWatered && downWatered && !rightWatered && !leftWatered)
+        {
+            return wateredGround[8];
+        }
+        else if (upWatered && !downWatered && rightWatered && !leftWatered)
+        {
+            return wateredGround[9];
+        }
+        else if (upWatered && !downWatered && rightWatered && leftWatered)
+        {
+            return wateredGround[10];
+        }
+        else if (upWatered && !downWatered && !rightWatered && leftWatered)
+        {
+            return wateredGround[11];
+        }
+        else if (upWatered && !downWatered && !rightWatered && !leftWatered)
+        {
+            return wateredGround[12];
+        }
+        else if (!upWatered && !downWatered && rightWatered && !leftWatered)
+        {
+            return wateredGround[13];
+        }
+        else if (!upWatered && !downWatered && rightWatered && leftWatered)
+        {
+            return wateredGround[14];
+        }
+        else if (!upWatered && !downWatered && !rightWatered && leftWatered)
+        {
+            return wateredGround[15];
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// Return whether the frid square at the given coordinates has been watered
+    /// </summary>
+    /// <param name="xGrid"></param>
+    /// <param name="yGrid"></param>
+    /// <returns></returns>
+    private bool IsGridSquareWatered(int xGrid, int yGrid)
+    {
+        GridPropertyDetails gridPropertyDetails = GetGridPropertyDetails(xGrid, yGrid);
+
+        if (gridPropertyDetails == null)
+        {
+            return false;
+        }
+        else if (gridPropertyDetails.DaysSinceWatered > -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /// <summary>
     /// Goes through every item in gridPropertyDictionary & calls the display methods
     /// </summary>
     private void DisplayGridPropertyDetails()
@@ -279,6 +451,8 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
             GridPropertyDetails gridPropertyDetails = gridProperty.Value;
 
             DisplayDugGround(gridPropertyDetails);
+
+            DisplayWateredGround(gridPropertyDetails);
         }
     }
 
@@ -454,5 +628,50 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
                 DisplayGridPropertyDetails();
             }
         }
+    }
+
+    /// <summary>
+    /// Change any of the grid property details that needs to respond to a change in day (all scenes)
+    /// </summary>
+    /// <param name="gameYear"></param>
+    /// <param name="gameSeason"></param>
+    /// <param name="gameDay"></param>
+    /// <param name="gameDayOfWeek"></param>
+    /// <param name="gameHour"></param>
+    /// <param name="gameMinute"></param>
+    /// <param name="gameSecond"></param>
+    private void AdvanceDay(int gameYear, Season gameSeason, int gameDay, Weekday gameDayOfWeek, int gameHour, int gameMinute, int gameSecond)
+    {
+        // Clear the display grid property details for dug and watered ground
+        ClearDisplayGridPropertyDetails();
+
+        // Loop through all grid property details in all scenes
+        foreach (SO_GridProperties so_GridProperties in so_gridPropertiesArray)
+        {
+            if (GameObjectSave.SceneData.TryGetValue(so_GridProperties.SceneName.ToString(), out SceneSave sceneSave))
+            {
+                if (sceneSave.GridPropertyDetailsDictionary != null)
+                {
+                    for (int i = sceneSave.GridPropertyDetailsDictionary.Count - 1; i >= 0; i--)
+                    {
+                        KeyValuePair<string, GridPropertyDetails> details = sceneSave.GridPropertyDetailsDictionary.ElementAt(i);
+
+                        GridPropertyDetails gridPropertyDetails = details.Value;
+
+                        // Reset days since watered to -1
+                        if (gridPropertyDetails.DaysSinceWatered > -1)
+                        {
+                            gridPropertyDetails.DaysSinceWatered = -1;
+                        }
+
+                        // Update the grid property details
+                        SetGridPropertyDetails(gridPropertyDetails.GridX, gridPropertyDetails.GridY, gridPropertyDetails, sceneSave.GridPropertyDetailsDictionary);
+                    }
+                }
+            }
+        }
+
+        // Update the display tiles
+        DisplayGridPropertyDetails();
     }
 }
