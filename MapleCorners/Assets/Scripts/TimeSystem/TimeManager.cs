@@ -78,7 +78,7 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>
       //Update the minute
       EventHandler.CallAdvanceGameMinuteEvent(year, season, day, weekday, hour, minute, second);
 
-      Debug.Log("Day: " + day + " hour: " + hour + " minute: " + minute);
+      //Debug.Log("Day: " + day + " hour: " + hour + " minute: " + minute);
     }
   }
 
