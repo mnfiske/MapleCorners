@@ -227,9 +227,9 @@ MonoBehaviour:
     canBeCarried: 0
   - itemCode: 10017
     itemType: 6
-    itemDescription: A basic scythe for reaping
+    itemDescription: A basic broom for sweeping
     itemSprite: {fileID: 21300506, guid: 853ac38383c680342ac7e688bf29b197, type: 3}
-    itemLongDescription: A sharp, basic scythe - great for cutting grass
+    itemLongDescription: A nice, basic broom - great for cleaning messes
     itemUseGridRadius: 0
     itemUseRadius: 1.5
     isStartingItem: 1
