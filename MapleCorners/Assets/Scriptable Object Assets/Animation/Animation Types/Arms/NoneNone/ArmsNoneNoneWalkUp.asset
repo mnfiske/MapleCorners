@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6d434a5973c148d09e18b4c9142cf76, type: 3}
-  m_Name: ArmsNoneCarryIdleDown 1
+  m_Name: ArmsNoneNoneWalkUp
   m_EditorClassIdentifier: 
-  animationClip: {fileID: 7400000, guid: 3874b27f2dbc4fc45bf0fc3b2294449c, type: 2}
-  animationName: 0
+  animationClip: {fileID: 7400000, guid: 13dfacc6f92fb2540972ed7302954bf2, type: 2}
+  animationName: 4
   characterPart: 1
   partVariantColour: 0
-  partVariantType: 1
+  partVariantType: 0
