@@ -829,10 +829,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7931b52656fd31d43b07db0462e6c2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 0}
   so_gridPropertiesArray:
   - {fileID: 11400000, guid: dbc0b012d7467ad4f963973f3ebd6755, type: 2}
   - {fileID: 11400000, guid: f75e34cdcb72e7b4c879a2c3d1b49334, type: 2}
+  dugGround:
+  - {fileID: 11400000, guid: 82c0b8aff247ba74e89d4cb40fb87c40, type: 2}
+  - {fileID: 11400000, guid: c2fe6a0a70a54444398328b886bd2d61, type: 2}
+  - {fileID: 11400000, guid: e3ca1af69d0729a468ce9b09db890464, type: 2}
+  - {fileID: 11400000, guid: 95a01b8f65e9ba745914a41f4063e416, type: 2}
+  - {fileID: 11400000, guid: b6aec1f34e294e8429d48eb3e8e268f4, type: 2}
+  - {fileID: 11400000, guid: d3e027105c55b4f498d0bdf19e825970, type: 2}
+  - {fileID: 11400000, guid: a0d333d414b81ee4eb39584ce1ab10c5, type: 2}
+  - {fileID: 11400000, guid: 4229d74911268aa42997ecd31b775d13, type: 2}
+  - {fileID: 11400000, guid: d510652e03da7984db1ddf0f7e8c2081, type: 2}
+  - {fileID: 11400000, guid: 97e55b1ddabaa1b48a0f8619372629ba, type: 2}
+  - {fileID: 11400000, guid: 9dd1042e0ad511c42bd15f2cc00b5444, type: 2}
+  - {fileID: 11400000, guid: 1030284498dbf27438cc220d7c27c09d, type: 2}
+  - {fileID: 11400000, guid: 72c3a6e75726fe145b39da547880b835, type: 2}
+  - {fileID: 11400000, guid: bb63769d78b2e58438420c77c9f3cf07, type: 2}
+  - {fileID: 11400000, guid: baac4938924b1004ca29ada646004e57, type: 2}
+  - {fileID: 11400000, guid: 5216e3345bb516844b83e6796d8d219c, type: 2}
 --- !u!114 &294327400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5271,3 +5287,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880275fcb94549aab36cd4106405a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equippedItemSpriteRenderer: {fileID: 0}
