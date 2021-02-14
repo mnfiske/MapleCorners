@@ -576,6 +576,15 @@ public class Player : SingletonMonoBehavior<Player>
         }
     }
 
+    /// <summary>
+    /// Returns the center position of the player
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetPlayerCenterPosition()
+    {
+        return new Vector3(transform.position.x, transform.position.y + Settings.playerCenterYOffset, transform.position.z);
+    }
+
     #region Test Methods
     private void PlayerTestInput()
   {

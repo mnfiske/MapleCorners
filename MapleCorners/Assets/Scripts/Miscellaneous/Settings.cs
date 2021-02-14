@@ -59,6 +59,9 @@ public static class Settings
     public static int idleLeft;
     public static int idleRight;
 
+    //Player
+    public static float playerCenterYOffset = 0.875f;
+
     //Time
     public const float secondsPerGameSecond = 0.012f; //~Every .7 seconds is a game minute
 
