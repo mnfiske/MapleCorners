@@ -154,32 +154,133 @@ public class GridCursor : MonoBehaviour
     CursorPositionIsValid = false;
   }
 
-  /// <summary>
-  /// Sets the cursor sprite to green and sets that the cursor position is valid
-  /// </summary>
-  private void SetCursorToValid()
-  {
+    /// <summary>
+    /// Sets the cursor sprite to green and sets that the cursor position is valid
+    /// </summary>
+    private void SetCursorToValid()
+    {
     cursorImage.sprite = greenCursorSprite;
     CursorPositionIsValid = true;
-  }
+    }
 
-  /// <summary>
-  /// Returns whether an item can be dropped at the passeed in gridPropertyDetails
-  /// </summary>
-  /// <param name="gridPropertyDetails"></param>
-  /// <returns></returns>
-  private bool CursorCanDropItem(GridPropertyDetails gridPropertyDetails)
-  {
+    /// <summary>
+    /// Returns whether an item can be dropped at the passeed in gridPropertyDetails
+    /// </summary>
+    /// <param name="gridPropertyDetails"></param>
+    /// <returns></returns>
+    private bool IsCursorValidForSeedOrCommodity(GridPropertyDetails gridPropertyDetails)
+    {
     return gridPropertyDetails.CanDropItem;
-  }
+    }
 
-  /// <summary>
-  /// Set whether the cursor position is valid
-  /// </summary>
-  /// <param name="cursorGridPosition"></param>
-  /// <param name="playerGridPosition"></param>
-  private void SetCursorValidity(Vector3Int cursorGridPosition, Vector3Int playerGridPosition)
-  {
+    /// <summary>
+    /// Returns whether the cursor is valid for the tool type in itemDetails at the position in gridPropertyDetails
+    /// </summary>
+    /// <param name="gridPropertyDetails"></param>
+    /// <param name="itemDetails"></param>
+    /// <returns></returns>
+    private bool IsCursorValidForTool(GridPropertyDetails gridPropertyDetails, ItemDetails itemDetails)
+    {
+        switch (itemDetails.itemType)
+        {
+            case ItemType.Hoeing_tool:
+                // Check if both the grid is diggable & te ground has not already been dug
+                if (gridPropertyDetails.IsDiggable == true && gridPropertyDetails.DaysSinceDug == -1)
+                {
+                    // Store the world position of the cursor
+                    Vector3 cursorWorldPosition = new Vector3(GetWorldPositionForCursor().x + 0.5f, GetWorldPositionForCursor().y + 0.5f, 0f);
+
+                    List<Item> itemList = new List<Item>();
+
+                    // Get any components at the location
+                    HelperMethods.GetComponentsAtBoxLocation<Item>(out itemList, cursorWorldPosition, Settings.cursorSize, 0f);
+
+                    bool foundReapable = false;
+
+                    // Loop through the components at the location to determine if they are reapable
+                    foreach (Item item in itemList)
+                    {
+                        if (InventoryManager.Instance.GetItemDetails(item.ItemCode).itemType == ItemType.Reapable_scenery)
+                        {
+                            foundReapable = true;
+                            break;
+                        }
+                    }
+
+                    if (foundReapable)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            /*
+            case ItemType.Watering_tool:
+                if (gridPropertyDetails.daysSinceDug > -1 && gridPropertyDetails.daysSinceWatered == -1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            case ItemType.Chopping_tool:
+            case ItemType.Collecting_tool:
+            case ItemType.Breaking_tool:
+
+                // Check if item can be harvested with item selected, check item is fully grown
+
+                // Check if seed planted
+                if (gridPropertyDetails.seedItemCode != -1)
+                {
+                    // Get crop details for seed
+                    CropDetails cropDetails = so_CropDetailsList.GetCropDetails(gridPropertyDetails.seedItemCode);
+
+                    // if crop details found
+                    if (cropDetails != null)
+                    {
+                        // Check if crop fully grown
+                        if (gridPropertyDetails.growthDays >= cropDetails.growthDays[cropDetails.growthDays.Length - 1])
+                        {
+                            // Check if crop can be harvested with tool selected
+                            if (cropDetails.CanUseToolToHarvestCrop(itemDetails.itemCode))
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+
+                return false;
+                */
+
+            default:
+                return false;
+        }
+    }
+
+    /// <summary>
+    /// Set whether the cursor position is valid
+    /// </summary>
+    /// <param name="cursorGridPosition"></param>
+    /// <param name="playerGridPosition"></param>
+    private void SetCursorValidity(Vector3Int cursorGridPosition, Vector3Int playerGridPosition)
+    {
     // Start with the cursor position valid
     SetCursorToValid();
 
@@ -187,9 +288,9 @@ public class GridCursor : MonoBehaviour
     if (Mathf.Abs(cursorGridPosition.x - playerGridPosition.x) > ItemUseGridRadius
         || Mathf.Abs(cursorGridPosition.y - playerGridPosition.y) > ItemUseGridRadius)
     {
-      // If we've reached this line, the position is not within the item's use radius, set the cursor to invalid and return
-      SetCursorToInvalid();
-      return;
+        // If we've reached this line, the position is not within the item's use radius, set the cursor to invalid and return
+        SetCursorToInvalid();
+        return;
     }
 
     // Get the details of the selected item
@@ -198,9 +299,9 @@ public class GridCursor : MonoBehaviour
     // Check if the selected item details are null
     if (itemDetails == null)
     {
-      // If so, that means we don't have an item selected. Set the cursor to invalid and return
-      SetCursorToInvalid();
-      return;
+        // If so, that means we don't have an item selected. Set the cursor to invalid and return
+        SetCursorToInvalid();
+        return;
     }
 
     // Get the GetGridPropertyDetails at the cursor position
@@ -208,53 +309,74 @@ public class GridCursor : MonoBehaviour
 
     if (gridPropertyDetails == null)
     {
-      // If the GetGridPropertyDetails are null, set the cursor to invalid and return
-      SetCursorToInvalid();
-      return;
+        // If the GetGridPropertyDetails are null, set the cursor to invalid and return
+        SetCursorToInvalid();
+        return;
     }
     else
     {
-      // Test if the cursor position is valid, based on the item type of the selected item
-      switch (itemDetails.itemType)
-      {
+        // Test if the cursor position is valid, based on the item type of the selected item
+        switch (itemDetails.itemType)
+        {
         case ItemType.Seed:
         case ItemType.Commodity:
-          if (!CursorCanDropItem(gridPropertyDetails))
-          {
+            if (!IsCursorValidForSeedOrCommodity(gridPropertyDetails))
+            {
             SetCursorToInvalid();
             return;
-          }
-          break;
+            }
+            break;
+
+        case ItemType.Watering_tool:
+        case ItemType.Hoeing_tool:
+        case ItemType.Reaping_tool:
+        case ItemType.Collecting_tool:
+            if (!IsCursorValidForTool(gridPropertyDetails, itemDetails))
+            {
+                SetCursorToInvalid();
+                return;
+            }
+            break;
 
         case ItemType.none:
-          break;
+            break;
 
         case ItemType.count:
-          break;
+            break;
 
         default:
-          break;
-      }
+            break;
+        }
     }
-  }
+    }
 
-  /// <summary>
-  /// Sets the cursor image to not be transparent & sets CursorIsEnabled to true
-  /// </summary>
-  public void EnableCursor()
-  {
+    /// <summary>
+    /// Sets the cursor image to not be transparent & sets CursorIsEnabled to true
+    /// </summary>
+    public void EnableCursor()
+    {
     cursorImage.color = new Color(1f, 1f, 1f, 1f);
     CursorIsEnabled = true;
-  }
+    }
 
-  /// <summary>
-  /// Sets the cursor image to transparent & sets CursorIsEnabled to false
-  /// </summary>
-  public void DisableCursor()
-  {
+    /// <summary>
+    /// Sets the cursor image to transparent & sets CursorIsEnabled to false
+    /// </summary>
+    public void DisableCursor()
+    {
     cursorImage.color = Color.clear;
 
     CursorIsEnabled = false;
-  }
-  
+    }
+
+    /// <summary>
+    /// Returns the world position for the cursor
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetWorldPositionForCursor()
+    {
+        // Get the grid position & convert it to a world position
+        return grid.CellToWorld(GetGridPositionForCursor());
+    }
+
 }
