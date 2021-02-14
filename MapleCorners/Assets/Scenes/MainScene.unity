@@ -2827,6 +2827,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ac513c1c5844f1894f971f0c22e59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1281210582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1281210583}
+  - component: {fileID: 1281210584}
+  m_Layer: 0
+  m_Name: CharacterCustomizer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281210583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281210582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4085432316748655000}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281210584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281210582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849c26783905c4ca391d06ef628c605c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 4085432316748655005}
+  soAnimationTypeArray:
+  - {fileID: 11400000, guid: a521aeeca3aef4e258b492cd7a73cd2f, type: 2}
+  - {fileID: 11400000, guid: 4b47680e4b78343c08f6e39eec355bdb, type: 2}
+  - {fileID: 11400000, guid: 208a9ff57ebd04cba85698073534c7db, type: 2}
+  - {fileID: 11400000, guid: 096d6f76553494ef995c28f3ef5568ed, type: 2}
+  - {fileID: 11400000, guid: 09dd4efc0ac254076be440a5ee93bfec, type: 2}
+  - {fileID: 11400000, guid: b1ac3cbbd66704dca8449aae83e51ca5, type: 2}
+  - {fileID: 11400000, guid: b5f8381ca829a49ff838c945ce7701b4, type: 2}
+  - {fileID: 11400000, guid: 09daea5dadab042d1b8125ff6b1a4426, type: 2}
+  - {fileID: 11400000, guid: bd03eef5da93a452b9e7391ff4d7279d, type: 2}
+  - {fileID: 11400000, guid: ef784da37d42843d791fedb5a1423a0f, type: 2}
+  - {fileID: 11400000, guid: c50826f20e6c74dfca515e6f2522cf1d, type: 2}
+  - {fileID: 11400000, guid: cafd89e81dbb945e2bd3359fcec7abc5, type: 2}
+  - {fileID: 11400000, guid: a5147d6bbd0c6443d94670be337fb0a5, type: 2}
+  - {fileID: 11400000, guid: ef5dd8bd8f7ab4f4286995f6bec51619, type: 2}
+  - {fileID: 11400000, guid: 6a2732bb6f25c4c169040cd6eca8b525, type: 2}
+  - {fileID: 11400000, guid: 0627a66ab3ace4a2a84434316c5f2a49, type: 2}
+  - {fileID: 11400000, guid: ff110a9c7046c43038ff2482f580a856, type: 2}
+  - {fileID: 11400000, guid: 97bfb698b8a0d4bcc9f474970dcdace5, type: 2}
+  - {fileID: 11400000, guid: d1ab8a8c39f6d44fdbd758fa3834084f, type: 2}
+  - {fileID: 11400000, guid: 9a0de70f929274677b627d3605cce94c, type: 2}
+  - {fileID: 11400000, guid: 49aacf977d5cf440b9c7d96c434c10d7, type: 2}
+  - {fileID: 11400000, guid: c0191c02b95c0489a93534e4c2f0dc19, type: 2}
+  - {fileID: 11400000, guid: d459479a87b0543a3889e37058f527d4, type: 2}
+  - {fileID: 11400000, guid: 70d9ca80a5abd4509b13266110d9c02c, type: 2}
 --- !u!1 &1328668057
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,7 +4884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4085432316130305393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4085432316748655000}
@@ -4889,6 +4958,7 @@ Transform:
   - {fileID: 4085432315407336244}
   - {fileID: 4085432315991796915}
   - {fileID: 4085432316755305220}
+  - {fileID: 1281210583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5304,4 +5374,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880275fcb94549aab36cd4106405a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedItemSpriteRenderer: {fileID: 0}
+  equippedItemSpriteRenderer: {fileID: 4085432316130305395}
