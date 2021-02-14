@@ -332,13 +332,15 @@ public class Player : SingletonMonoBehavior<Player>
     }
 
     /// <summary>
-    /// Triggers a coroutine to start the hoe animation
+    /// Triggers a coroutine to start the hoe animation & updates the tiles display
     /// </summary>
     /// <param name="gridPropertyDetails"></param>
     /// <param name="playerDirection"></param>
     private void HoeGroundAtCursor(GridPropertyDetails gridPropertyDetails, Vector3Int playerDirection)
     {
         StartCoroutine(HoeGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
+
+        GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
     }
 
     /// <summary>
