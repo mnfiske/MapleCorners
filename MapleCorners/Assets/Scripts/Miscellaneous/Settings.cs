@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// "Citation: Unity 2D Game Developer Course Farming RPG"
+
+using UnityEngine;
 
 public static class Settings
 {
@@ -27,9 +29,13 @@ public static class Settings
     public const string HoeingTool = "Hoe";
     public const string ChoppingTool = "Axe";
     public const string BreakingTool = "Pickaxe";
-    public const string ReapingTool = "Scythe";
+    public const string ReapingTool = "Broom";
     public const string WateringTool = "Watering Can";
     public const string CollectingTool = "Basket";
+
+    // Reaping
+    public const int maxCollidersToTestPerReapSwing = 15;
+    public const int maxTargetComponentsToDestroyPerReapSwing = 2;
 
     // Animation Parameters
     public static int xInput;
@@ -58,6 +64,9 @@ public static class Settings
     public static int idleDown;
     public static int idleLeft;
     public static int idleRight;
+
+    //Player
+    public static float playerCenterYOffset = 0.875f;
 
     //Time
     public const float secondsPerGameSecond = 0.012f; //~Every .7 seconds is a game minute

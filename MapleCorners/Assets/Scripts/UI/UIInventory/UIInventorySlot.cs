@@ -10,6 +10,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Camera mainCamera;
     private Transform parentItem;
     private GridCursor gridCursor;
+    private Cursor cursor;
     private GameObject draggedItem;
     private Canvas parentCanvas;
 
@@ -35,6 +36,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         mainCamera = Camera.main;
         gridCursor = FindObjectOfType<GridCursor>();
+        cursor = FindObjectOfType<Cursor>();
     }
 
     private void SetSelectedItem()
@@ -48,8 +50,9 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // Set highlighted inventory slots
         inventoryBar.SetHighlightedInventorySlots();
 
-        // Store the item's use radius for the gird cursor
+        // Store the item's use radius for the cursors
         gridCursor.ItemUseGridRadius = itemDetails.itemUseGridRadius;
+        cursor.ItemUseRadius = itemDetails.itemUseRadius;
 
         // If the item's itemUseGridRadius is greater than 0 we want to enable the grid cursor, else disable it
         if (itemDetails.itemUseGridRadius > 0)
@@ -61,8 +64,20 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             gridCursor.DisableCursor();
         }
 
-        // Set the grid cursor's SelectedItemType to the item's itemType
+        // If the item's itemUseRadius is greater than 0 we want to enable the grid cursor, else disable it
+        if (itemDetails.itemUseRadius > 0f)
+        {
+            cursor.EnableCursor();
+        }
+        else
+        {
+            cursor.DisableCursor();
+        }
+
+
+        // Set the cursors' SelectedItemType to the item's itemType
         gridCursor.SelectedItemType = itemDetails.itemType;
+        cursor.SelectedItemType = itemDetails.itemType;
 
         // Set item selected in inventory
         InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, itemDetails.itemCode);
@@ -267,8 +282,10 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     /// </summary>
     private void ClearCursors()
     {
-      gridCursor.DisableCursor();
+        gridCursor.DisableCursor();
+        cursor.DisableCursor();
 
-      gridCursor.SelectedItemType = ItemType.none;
+        gridCursor.SelectedItemType = ItemType.none;
+        cursor.SelectedItemType = ItemType.none;
     }
 }
