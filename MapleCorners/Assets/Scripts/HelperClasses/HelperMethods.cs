@@ -87,7 +87,7 @@ public static class HelperMethods
     }
 
     /// <summary>
-    /// 
+    /// Get the components of the specified type within the box area
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="numberOfCollidersToTest"></param>

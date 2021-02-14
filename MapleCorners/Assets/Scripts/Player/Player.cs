@@ -11,6 +11,8 @@ public class Player : SingletonMonoBehavior<Player>
 
     private AnimationOverrides animationOverrides;
     private GridCursor gridCursor;
+    private Cursor cursor;
+
     // Movement Parameters from player animation
     private float inputX;
     private float inputY;
@@ -83,9 +85,25 @@ public class Player : SingletonMonoBehavior<Player>
         mainCamera = Camera.main;
     }
 
+
+    private void OnEnable()
+    {
+        EventHandler.BeforeSceneUnloadFadeOutEvent += DisablePlayerInputAndResetMovement;
+        EventHandler.AfterSceneLoadFadeInEvent += EnablePlayerInput;
+    }
+
+
+    private void OnDisable()
+    {
+        EventHandler.BeforeSceneUnloadFadeOutEvent -= DisablePlayerInputAndResetMovement;
+        EventHandler.AfterSceneLoadFadeInEvent -= EnablePlayerInput;
+    }
+
     private void Start()
     {
         gridCursor = FindObjectOfType<GridCursor>();
+        cursor = FindObjectOfType<Cursor>();
+
         useToolAnimationPause = new WaitForSeconds(Settings.useToolAnimationPause);
         afterUseToolAnimationPause = new WaitForSeconds(Settings.afterUseToolAnimationPause);
         liftToolAnimationPause = new WaitForSeconds(Settings.liftToolAnimationPause);
@@ -230,7 +248,7 @@ public class Player : SingletonMonoBehavior<Player>
         {
             if (Input.GetMouseButton(0))
             {
-                if (gridCursor.CursorIsEnabled)
+                if (gridCursor.CursorIsEnabled || cursor.CursorIsEnabled)
                 {
                     Vector3Int cursorGridPosition = gridCursor.GetGridPositionForCursor();
                     Vector3Int playerGridPosition = gridCursor.GetGridPositionForPlayer();
@@ -320,15 +338,13 @@ public class Player : SingletonMonoBehavior<Player>
                 }
                 break;
 
-            /*
             case ItemType.Reaping_tool:
                 if (cursor.CursorPositionIsValid)
                 {
-                    playerDirection = GetPlayerDirection(cursor.GetWorldPositionForCursor(), GetPlayerCentrePosition());
+                    playerDirection = GetPlayerDirection(cursor.GetWorldPositionForCursor(), GetPlayerCenterPosition());
                     ReapInPlayerDirectionAtCursor(itemDetails, playerDirection);
                 }
                 break;
-                */
 
             default:
                 break;
@@ -577,12 +593,138 @@ public class Player : SingletonMonoBehavior<Player>
     }
 
     /// <summary>
+    /// Returns which direction the tool should be used in
+    /// </summary>
+    /// <param name="cursorPosition"></param>
+    /// <param name="playerPosition"></param>
+    /// <returns></returns>
+    private Vector3Int GetPlayerDirection(Vector3 cursorPosition, Vector3 playerPosition)
+    {
+        if (cursorPosition.x > playerPosition.x &&
+            cursorPosition.y < (playerPosition.y + cursor.ItemUseRadius / 2f) &&
+            cursorPosition.y > (playerPosition.y - cursor.ItemUseRadius / 2f))
+        {
+            return Vector3Int.right;
+        }
+        else if (cursorPosition.x < playerPosition.x &&
+                 cursorPosition.y < (playerPosition.y + cursor.ItemUseRadius / 2f) &&
+                 cursorPosition.y > (playerPosition.y - cursor.ItemUseRadius / 2f))
+        {
+            return Vector3Int.left;
+        }
+        else if (cursorPosition.y > playerPosition.y)
+        {
+            return Vector3Int.up;
+        }
+        else
+        {
+            return Vector3Int.down;
+        }
+    }
+
+    /// <summary>
     /// Returns the center position of the player
     /// </summary>
     /// <returns></returns>
     public Vector3 GetPlayerCenterPosition()
     {
         return new Vector3(transform.position.x, transform.position.y + Settings.playerCenterYOffset, transform.position.z);
+    }
+
+    private void ReapInPlayerDirectionAtCursor(ItemDetails itemDetails, Vector3Int playerDirection)
+    {
+        StartCoroutine(ReapInPlayerDirectionAtCursorRoutine(itemDetails, playerDirection));
+    }
+
+
+    private IEnumerator ReapInPlayerDirectionAtCursorRoutine(ItemDetails itemDetails, Vector3Int playerDirection)
+    {
+        // Disable player input & tool use
+        PlayerInputIsDisabled = true;
+        playerToolUseDisabled = true;
+
+        // Set the animation
+        toolCharacterAttribute.partVariantType = PartVariantType.scythe;
+        characterAttributeCustomizationList.Clear();
+        characterAttributeCustomizationList.Add(toolCharacterAttribute);
+        animationOverrides.ApplyCharacterCustomisationParameters(characterAttributeCustomizationList);
+
+        // Reap
+        UseToolInPlayerDirection(itemDetails, playerDirection);
+
+        // Pause
+        yield return useToolAnimationPause;
+
+        // Enable player input & tool use
+        PlayerInputIsDisabled = false;
+        playerToolUseDisabled = false;
+    }
+
+    /// <summary>
+    /// Reap
+    /// </summary>
+    /// <param name="equippedItemDetails"></param>
+    /// <param name="playerDirection"></param>
+    private void UseToolInPlayerDirection(ItemDetails equippedItemDetails, Vector3Int playerDirection)
+    {
+        if (Input.GetMouseButton(0))
+        {
+            switch (equippedItemDetails.itemType)
+            {
+                case ItemType.Reaping_tool:
+                    // Ser the animation direction
+                    if (playerDirection == Vector3Int.right)
+                    {
+                        isSwingingToolRight = true;
+                    }
+                    else if (playerDirection == Vector3Int.left)
+                    {
+                        isSwingingToolLeft = true;
+                    }
+                    else if (playerDirection == Vector3Int.up)
+                    {
+                        isSwingingToolUp = true;
+                    }
+                    else if (playerDirection == Vector3Int.down)
+                    {
+                        isSwingingToolDown = true;
+                    }
+                    break;
+            }
+
+            // Set the center point of the square
+            Vector2 point = new Vector2(GetPlayerCenterPosition().x + (playerDirection.x * (equippedItemDetails.itemUseRadius / 2f)), 
+                            GetPlayerCenterPosition().y + playerDirection.y * (equippedItemDetails.itemUseRadius / 2f));
+
+            // Set the size of thw square
+            Vector2 size = new Vector2(equippedItemDetails.itemUseRadius, equippedItemDetails.itemUseRadius);
+
+            // Get the components of the type Item within the box area
+            Item[] itemArray = HelperMethods.GetComponentsAtBoxLocationNonAlloc<Item>(Settings.maxCollidersToTestPerReapSwing, point, size, 0f);
+
+            int reapableItemCount = 0;
+
+            // Loop through all the items
+            for (int i = itemArray.Length - 1; i >= 0; i--)
+            {
+                if (itemArray[i] != null)
+                {
+                    // Check if the item has a type of Reapable_scenery
+                    if (InventoryManager.Instance.GetItemDetails(itemArray[i].ItemCode).itemType == ItemType.Reapable_scenery)
+                    {
+                        // If so, set the position for the cutting effect
+                        Vector3 effectPosition = new Vector3(itemArray[i].transform.position.x, itemArray[i].transform.position.y + Settings.gridCellSize / 2f, itemArray[i].transform.position.z);
+
+                        // Destroy the targeted item
+                        Destroy(itemArray[i].gameObject);
+
+                        reapableItemCount++;
+                        if (reapableItemCount >= Settings.maxTargetComponentsToDestroyPerReapSwing)
+                            break;
+                    }
+                }
+            }
+        }
     }
 
     #region Test Methods
