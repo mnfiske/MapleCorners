@@ -71,6 +71,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             Player.Instance.ShowCarriedItem(itemDetails.itemCode);
         }
+        else
         {
             Player.Instance.ClearCarriedItem();
         }
