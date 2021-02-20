@@ -52,7 +52,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 76b67f58cf2a792438dacf663689a3c0, type: 3}
     - {fileID: 102900000, guid: 0192443a29c27e747a3eb28596eddb21, type: 3}
     - {fileID: 102900000, guid: 15ae8b62ae9660f4f87a9f2d47eacc97, type: 3}
-    totalSpriteSurfaceArea: 338750
+    totalSpriteSurfaceArea: 339518
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -104,6 +104,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fec47794c20ce834da941a7b4e8caa07, type: 3}
   - {fileID: 1957107745717523172, guid: fec47794c20ce834da941a7b4e8caa07, type: 3}
   - {fileID: 21300000, guid: 2a6700e4157309649a1edb27b126da7c, type: 3}
+  - {fileID: 21300000, guid: 3ddae31550dedad4fa2e1cae1e2124e2, type: 3}
   - {fileID: 21300000, guid: 89c46045b5f23d840b62099f6f1f6344, type: 3}
   - {fileID: 21300000, guid: 60f7a57556be87841a8cabc94054df28, type: 3}
   - {fileID: 21300000, guid: 7700e9e59e6f58e4598ea8f2e5a84cc1, type: 3}
@@ -196,9 +197,11 @@ SpriteAtlas:
   - {fileID: 6019493940114240039, guid: d241c496741a12d4290e12ba81dd6724, type: 3}
   - {fileID: 4789355601316357596, guid: d241c496741a12d4290e12ba81dd6724, type: 3}
   - {fileID: 21300000, guid: e26dc0d638731ec47abe9c4b3cae62ac, type: 3}
+  - {fileID: 21300000, guid: e35874e62eb7a5849aa92266f6fa4c39, type: 3}
   - {fileID: 21300000, guid: 2e92a61802edadc4495e4d901e3a97cb, type: 3}
   - {fileID: 21300000, guid: 37e09848a493a0a4b89a743f73f75963, type: 3}
   - {fileID: 21300000, guid: 4fb548784c08c2c40b86a99493efa98d, type: 3}
+  - {fileID: 21300000, guid: 48703da83fc534d498c289dfa3fd9406, type: 3}
   - {fileID: 21300000, guid: c31ef2d8735edaa4c898f9e490b6d95e, type: 3}
   - {fileID: 6887888638497536022, guid: afeab3b9fd0c19442af661a1d1f72d1b, type: 3}
   - {fileID: 7549046521571793231, guid: afeab3b9fd0c19442af661a1d1f72d1b, type: 3}
@@ -938,6 +941,7 @@ SpriteAtlas:
   - effects_0
   - effects_1
   - InventoryPlayerGreyedOut
+  - Mess2
   - Transparent16x16
   - Table
   - Stone
@@ -1030,9 +1034,11 @@ SpriteAtlas:
   - CanyonOak_1
   - CanyonOak_0
   - Wood
+  - Rubbish
   - GreenGridCursor
   - Cactus1
   - Stone1Seed
+  - Mess1
   - HalfCollisionTile
   - IndoorsTileset_15
   - IndoorsTileset_6
