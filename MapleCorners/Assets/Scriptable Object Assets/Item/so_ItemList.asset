@@ -350,7 +350,7 @@ MonoBehaviour:
     itemDescription: Pumpkin seed
     itemSprite: {fileID: 21300000, guid: 2fcb9bacb0996db4187ade7ff7fd01ba, type: 3}
     itemLongDescription: Pumpkin seeds take 9 days to grow
-    itemUseGridRadius: 0
+    itemUseGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
     canBePickedUp: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
     itemDescription: Corn seed
     itemSprite: {fileID: 21300000, guid: 7b81fb3fe28ab384aa1bc00762b3d5bd, type: 3}
     itemLongDescription: Corn seeds take 7 days to grow
-    itemUseGridRadius: 0
+    itemUseGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
     canBePickedUp: 1

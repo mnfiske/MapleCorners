@@ -17,6 +17,21 @@ TextureImporter:
   - first:
       213: 7534850945310962314
     second: CornCrop_4
+  - first:
+      213: 9066738770292027557
+    second: CornCrop_0
+  - first:
+      213: -1929953977208819771
+    second: CornCrop_1
+  - first:
+      213: 7613076476687731651
+    second: CornCrop_2
+  - first:
+      213: 8527868815550689010
+    second: CornCrop_3
+  - first:
+      213: 8542715130429107807
+    second: CornCrop_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,19 +120,19 @@ TextureImporter:
       name: CornCrop_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8ec37b77359b1150800000000000000
-      internalID: 5844429006970277517
+      spriteID: 5a0b48abfd683dd70800000000000000
+      internalID: 9066738770292027557
       vertices: []
       indices: 
       edges: []
@@ -126,19 +141,19 @@ TextureImporter:
       name: CornCrop_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 3
-        width: 10
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fe5819ba2026c420800000000000000
-      internalID: 2649840798620212980
+      spriteID: 5cfad93451d6735e0800000000000000
+      internalID: -1929953977208819771
       vertices: []
       indices: 
       edges: []
@@ -147,19 +162,19 @@ TextureImporter:
       name: CornCrop_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 3
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a51c3d8e672d41120800000000000000
-      internalID: 2383761510940000602
+      spriteID: 3cbcad048b417a960800000000000000
+      internalID: 7613076476687731651
       vertices: []
       indices: 
       edges: []
@@ -169,18 +184,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 2
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ac062187653b8600800000000000000
-      internalID: 471529304655006882
+      spriteID: 2fea7025183195670800000000000000
+      internalID: 8527868815550689010
       vertices: []
       indices: 
       edges: []
@@ -190,18 +205,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 2
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a82b6ce630b219860800000000000000
-      internalID: 7534850945310962314
+      spriteID: f5ee49e5622dd8670800000000000000
+      internalID: 8542715130429107807
       vertices: []
       indices: 
       edges: []
