@@ -30,7 +30,7 @@ public class EnergyController : SingletonMonoBehavior<EnergyController>
 
     public void SetEnergy(float newEnergy)
     {
-        playerEnergy = playerEnergy + newEnergy;
+        playerEnergy = newEnergy;
         UpdateEnergy();
     }
 
