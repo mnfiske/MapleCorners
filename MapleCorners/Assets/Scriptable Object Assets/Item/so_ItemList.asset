@@ -333,3 +333,15 @@ MonoBehaviour:
     canBeDropped: 0
     canBeEaten: 0
     canBeCarried: 0
+  - itemCode: 10026
+    itemType: 8
+    itemDescription: Rubbish
+    itemSprite: {fileID: 21300000, guid: e35874e62eb7a5849aa92266f6fa4c39, type: 3}
+    itemLongDescription: What a bunch of junk! What can I do with this rubbish...
+    itemUseGridRadius: 0
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0

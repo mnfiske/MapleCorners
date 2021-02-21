@@ -44,6 +44,7 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>
   /// </summary>
   private void updateTime()
   {
+        //Debug.Log("seconds: " + second);
     second++;
 
     //If the number of seconds have added up to a minute, increment minute and reset second to 0
@@ -108,6 +109,19 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>
       updateTick();
     }
   }
+
+    // test script to increment time to 6am
+    public void AdvanceToNextDay()
+    {
+        //Debug.Log("Made it here");
+        //Debug.Log("Hour: " + hour + "Minute: " + minute + "second: " + second);
+        //Debug.Log("Is this true? " + (hour != 6 && minute != 0 && second != 0) );
+        while ( !(hour == 6 && minute == 0 && second == 0) )
+        {
+            //Debug.Log("incrementing...");
+            updateTime();
+        }
+    }
 
   #region Test Methods
   public void TestAdvanceGameMinute()
