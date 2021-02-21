@@ -8,6 +8,7 @@ TagManager:
   - ItemsParentTransform
   - FloorDecoration1
   - FloorDecoration2
+  - CropsParentTransform
   layers:
   - Default
   - TransparentFX

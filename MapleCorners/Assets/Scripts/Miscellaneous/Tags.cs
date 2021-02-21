@@ -9,4 +9,6 @@ public static class Tags
 
     public const string FloorDecoration1 = "FloorDecoration1";
     public const string FloorDecoration2 = "FloorDecoration2";
+
+    public const string CropsParentTransform = "CropsParentTransform";
 }
