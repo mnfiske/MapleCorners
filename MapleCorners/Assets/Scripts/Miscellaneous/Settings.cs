@@ -14,8 +14,8 @@ public static class Settings
     public const float gridCellSize = 1f; // The grid cell size in Unity units
 
     // Movement
-    public const float runningSpeed = 5.333f;
-    public const float walkingSpeed = 2.666f;
+    public static float runningSpeed = 5.333f;
+    public static float walkingSpeed = 2.666f;
     public static float useToolAnimationPause = 0.25f;
     public static float afterUseToolAnimationPause = 0.2f;
     public static float liftToolAnimationPause = 0.4f;
@@ -101,4 +101,14 @@ public static class Settings
         idleRight = Animator.StringToHash("idleRight");
     }
 
+    public static void DecMovementSpeed()
+    {
+        runningSpeed = 2.666f;
+        walkingSpeed = 1.333f;
+    }
+    public static void IncMovementSpeed()
+    {
+        runningSpeed = 5.333f;
+        walkingSpeed = 2.666f;
+    }
 }
