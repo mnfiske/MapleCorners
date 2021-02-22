@@ -52,15 +52,25 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 76b67f58cf2a792438dacf663689a3c0, type: 3}
     - {fileID: 102900000, guid: 0192443a29c27e747a3eb28596eddb21, type: 3}
     - {fileID: 102900000, guid: 15ae8b62ae9660f4f87a9f2d47eacc97, type: 3}
-    totalSpriteSurfaceArea: 339518
+    totalSpriteSurfaceArea: 345150
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: f0d720006ae6c9e468cc99a9f1713ba1, type: 3}
   - {fileID: 21300000, guid: 25925800440b0e84f9533a314ddca6b5, type: 3}
   - {fileID: 21300000, guid: 7da78110e28e0f74aaa3ef4a41f4c0ed, type: 3}
+  - {fileID: 2383761510940000602, guid: d4d5d86117589fd41887be09e4e9cdcc, type: 3}
+  - {fileID: 471529304655006882, guid: d4d5d86117589fd41887be09e4e9cdcc, type: 3}
+  - {fileID: 5844429006970277517, guid: d4d5d86117589fd41887be09e4e9cdcc, type: 3}
+  - {fileID: 2649840798620212980, guid: d4d5d86117589fd41887be09e4e9cdcc, type: 3}
+  - {fileID: 7534850945310962314, guid: d4d5d86117589fd41887be09e4e9cdcc, type: 3}
   - {fileID: 21300000, guid: 207ad99171e171b418bcaaa396d5a6f6, type: 3}
   - {fileID: 21300000, guid: aa1fcd9144ccf574985824378256b95c, type: 3}
+  - {fileID: 6514324408923622743, guid: 619afaf10f4ce104b8d4c3a4b690729b, type: 3}
+  - {fileID: -2977635334617688854, guid: 619afaf10f4ce104b8d4c3a4b690729b, type: 3}
+  - {fileID: 526701775452766164, guid: 619afaf10f4ce104b8d4c3a4b690729b, type: 3}
+  - {fileID: -3539033338271775433, guid: 619afaf10f4ce104b8d4c3a4b690729b, type: 3}
+  - {fileID: -5751957575304409421, guid: 619afaf10f4ce104b8d4c3a4b690729b, type: 3}
   - {fileID: 21300000, guid: 8298ab725cafa93429a58bd3e8273289, type: 3}
   - {fileID: 21300000, guid: 081b5033ea188cb48b5d44b99ab920bc, type: 3}
   - {fileID: 21300000, guid: 0e9e72533af4a924cb98248a27955a25, type: 3}
@@ -816,6 +826,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 898d91cb190da4b479714f63ae8519e0, type: 3}
   - {fileID: 21300000, guid: 730e572c78cf0244ca0db36bb8f3af7f, type: 3}
   - {fileID: 21300000, guid: 2a61f48c8f2dfed4da6f2f8e2485ee15, type: 3}
+  - {fileID: 21300000, guid: 2fcb9bacb0996db4187ade7ff7fd01ba, type: 3}
   - {fileID: 21300000, guid: 90499fac1706de44382ab07f7887e79e, type: 3}
   - {fileID: 21300000, guid: b2eff0cde9f776947b747c1a4cc96406, type: 3}
   - {fileID: 21300000, guid: d1488fdd7509cda4f9b89da8bb3c5a68, type: 3}
@@ -850,6 +861,7 @@ SpriteAtlas:
   - {fileID: -7746961489531447020, guid: afba78ae84664a941a55c31758ab5cf9, type: 3}
   - {fileID: -5900568562052052237, guid: afba78ae84664a941a55c31758ab5cf9, type: 3}
   - {fileID: 21300000, guid: 6cefe32f730a75046ab8e8e5434d336e, type: 3}
+  - {fileID: 21300000, guid: 7b81fb3fe28ab384aa1bc00762b3d5bd, type: 3}
   - {fileID: -8889897509666649805, guid: 400e208f8ff6631429ef6ca968c16ad2, type: 3}
   - {fileID: 6224320500644084454, guid: 400e208f8ff6631429ef6ca968c16ad2, type: 3}
   - {fileID: 8544150700639678146, guid: 400e208f8ff6631429ef6ca968c16ad2, type: 3}
@@ -896,8 +908,18 @@ SpriteAtlas:
   - Pumpkin
   - Weed1
   - ParsnipSeeds
+  - CornCrop_2
+  - CornCrop_3
+  - CornCrop_0
+  - CornCrop_1
+  - CornCrop_4
   - Grass1
   - Clock
+  - PumpkinCrop_4
+  - PumpkinCrop_2
+  - PumpkinCrop_3
+  - PumpkinCrop_0
+  - PumpkinCrop_1
   - TumbleweedThistle
   - Sweetcorn
   - PauseScreen9Sprite
@@ -1653,6 +1675,7 @@ SpriteAtlas:
   - GreenCursor
   - Acorn
   - Chair
+  - PumpkinSeeds
   - Collision Tile Diagonal
   - InventoryHighlight
   - PauseScreenSelectedTab
@@ -1687,6 +1710,7 @@ SpriteAtlas:
   - Butch_16
   - Butch_15
   - WildOakScenary
+  - CornSeeds
   - Cora_8
   - Cora_7
   - Cora_6

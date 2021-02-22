@@ -866,6 +866,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 89730a0741799324cb20804a5bc32a1e, type: 2}
   - {fileID: 11400000, guid: 9885d1872674e8d439634ed8a74fc7b5, type: 2}
   - {fileID: 11400000, guid: d5315e4908758e340b7e58964e74aaf0, type: 2}
+  so_CropDetailsList: {fileID: 11400000, guid: 5226f8dd00979b649aacd25a56d30a65, type: 2}
 --- !u!114 &294327400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3640,6 +3641,7 @@ MonoBehaviour:
   cursorRectTransform: {fileID: 102658051}
   greenCursorSprite: {fileID: 21300000, guid: 2e92a61802edadc4495e4d901e3a97cb, type: 3}
   redCursorSprite: {fileID: 21300000, guid: a605f55636af56b47b309a2177079511, type: 3}
+  so_CropDetailsList: {fileID: 11400000, guid: 5226f8dd00979b649aacd25a56d30a65, type: 2}
 --- !u!225 &1714891820
 CanvasGroup:
   m_ObjectHideFlags: 0

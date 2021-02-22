@@ -21,6 +21,8 @@ public class GridCursor : MonoBehaviour
   [SerializeField] private Sprite greenCursorSprite = null;
   // A reference to the red cursor sprite
   [SerializeField] private Sprite redCursorSprite = null;
+  // so_CropDetailsList scriptable object
+  [SerializeField] private SO_CropDetailsList so_CropDetailsList = null;
 
   // Whether the cursor position is valid or not
   private bool _cursorPositionIsValid = false;
@@ -231,6 +233,39 @@ public class GridCursor : MonoBehaviour
                     return false;
                 }
 
+            case ItemType.Collecting_tool:
+
+                // If a crop is planted
+                if (gridPropertyDetails.SeedItemCode != -1)
+                {
+                    // Get the crop details
+                    CropDetails cropDetails = so_CropDetailsList.GetCropDetails(gridPropertyDetails.SeedItemCode);
+
+                    if (cropDetails != null)
+                    {
+                        // If the crop is fully grown
+                        if (gridPropertyDetails.GrowthDays >= cropDetails.totalGrowthDays)
+                        {
+                            // If the tool can be use to harvest the crop
+                            if (cropDetails.CanUseToolToHarvestCrop(itemDetails.itemCode))
+                            {
+                                // Then the cursor is valid
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+
+                return false;
+
             default:
                 return false;
         }
@@ -292,6 +327,7 @@ public class GridCursor : MonoBehaviour
         case ItemType.Watering_tool:
         case ItemType.Hoeing_tool:
         case ItemType.Reaping_tool:
+        case ItemType.Collecting_tool:
             if (!IsCursorValidForTool(gridPropertyDetails, itemDetails))
             {
                 SetCursorToInvalid();

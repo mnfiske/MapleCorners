@@ -109,6 +109,7 @@ public class Cursor : MonoBehaviour
             case ItemType.Watering_tool:
             case ItemType.Hoeing_tool:
             case ItemType.Reaping_tool:
+            case ItemType.Collecting_tool:
                 //If the item type is a tool but the cursor position is invalid for a tool, set the cursor to invalid & return
                 if (!SetCursorValidityTool(cursorPosition, playerPosition, itemDetails))
                 {
