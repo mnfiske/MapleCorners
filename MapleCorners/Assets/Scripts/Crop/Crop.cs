@@ -25,28 +25,6 @@ public class Crop : MonoBehaviour
         CropDetails cropDetails = GridPropertiesManager.Instance.GetCropDetails(seedItemDetails.itemCode);
         if (cropDetails == null)
             return;
-        /*
-        Animator animator = GetComponentInChildren<Animator>();
-
-        if (animator != null)
-        {
-            if (isToolRight || isToolUp)
-            {
-                animator.SetTrigger("usetoolright");
-            }
-            else if (isToolLeft || isToolDown)
-            {
-                animator.SetTrigger("usetoolleft");
-            }
-        }
-        
-        // Trigger tool particle effect on crop
-        if (cropDetails.isHarvestActionEffect)
-        {
-            EventHandler.CallHarvestActionEffectEvent(harvestActionEffectTransform.position, cropDetails.harvestActionEffect);
-        }
-        */
-
         harvestActionCount += 1;
 
         int requiredHarvestActions = cropDetails.RequiredHarvestActionsForTool(equippedItemDetails.itemCode);
@@ -55,81 +33,27 @@ public class Crop : MonoBehaviour
 
         if (harvestActionCount >= requiredHarvestActions)
         {
-            HarvestCrop(/*isToolRight, isToolUp,*/ cropDetails, gridPropertyDetails/*, animator*/);
+            HarvestCrop(cropDetails, gridPropertyDetails);
         }
     }
 
 
-    private void HarvestCrop(/*bool isUsingToolRight, bool isUsingToolUp, */CropDetails cropDetails, GridPropertyDetails gridPropertyDetails/*, Animator animator*/)
+    private void HarvestCrop(CropDetails cropDetails, GridPropertyDetails gridPropertyDetails)
     {
-        /*
-        if (cropDetails.isHarvestedAnimation && animator != null)
-        {
-            if (cropDetails.harvestedSprite != null)
-            {
-                if (cropHarvestedSpriteRenderer != null)
-                {
-                    cropHarvestedSpriteRenderer.sprite = cropDetails.harvestedSprite;
-                }
-            }
-
-            if (isUsingToolRight || isUsingToolUp)
-            {
-                animator.SetTrigger("harvestright");
-            }
-            else
-            {
-                animator.SetTrigger("harvestleft");
-            }
-        }
-        */
-
         gridPropertyDetails.SeedItemCode = -1;
         gridPropertyDetails.GrowthDays = -1;
         gridPropertyDetails.DaysSinceLastHarvest = -1;
         gridPropertyDetails.DaysSinceWatered = -1;
-        /*
-        // Should the crop be hidden before the harvested animation
-        if (cropDetails.hideCropBeforeHarvestedAnimation)
-        {
-            GetComponentInChildren<SpriteRenderer>().enabled = false;
-        }
-
-        // Should box colliders be disabled before harvest
-        if (cropDetails.disableCropCollidersBeforeHarvestedAnimation)
-        {
-            // Disable any box colliders
-            Collider2D[] collider2Ds = GetComponentsInChildren<Collider2D>();
-            foreach (Collider2D collider2D in collider2Ds)
-            {
-                collider2D.enabled = false;
-            }
-        }
-        */
+        
         GridPropertiesManager.Instance.SetGridPropertyDetails(gridPropertyDetails.GridX, gridPropertyDetails.GridY, gridPropertyDetails);
 
-        /*if (cropDetails.isHarvestedAnimation && animator != null)
-        {
-            StartCoroutine(ProcessHarvestActionsAfterAnimation(cropDetails, gridPropertyDetails, animator));
-        }
-        else
-        {
-        */
-            HarvestActions(cropDetails, gridPropertyDetails);
-        //}
+        HarvestActions(cropDetails, gridPropertyDetails);
     }
 
 
     private void HarvestActions(CropDetails cropDetails, GridPropertyDetails gridPropertyDetails)
     {
         SpawnHarvestedItems(cropDetails);
-
-        /*
-        if (cropDetails.harvestedTransformItemCode > 0)
-        {
-            CreateHarvestedTransformCrop(cropDetails, gridPropertyDetails);
-        }
-        */
 
         Destroy(gameObject);
     }

@@ -236,7 +236,7 @@ MonoBehaviour:
     canBePickedUp: 1
     canBeDropped: 0
     canBeEaten: 0
-    canBeCarried: 1
+    canBeCarried: 0
   - itemCode: 10018
     itemType: 8
     itemDescription: Grass1
