@@ -735,16 +735,15 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
 
                         GridPropertyDetails gridPropertyDetails = details.Value;
 
-                        // Reset days since watered to -1
+                        // Grow any planted crop and reset days since watered to -1
                         if (gridPropertyDetails.DaysSinceWatered > -1)
                         {
+                            // Update the GrowthDays if a crop is planted here
+                            if (gridPropertyDetails.GrowthDays > -1)
+                            {
+                                gridPropertyDetails.GrowthDays += 1;
+                            }
                             gridPropertyDetails.DaysSinceWatered = -1;
-                        }
-
-                        // Update the GrowthDays if a crop is planted here
-                        if (gridPropertyDetails.GrowthDays > -1)
-                        {
-                            gridPropertyDetails.GrowthDays += 1;
                         }
 
                         // Update the grid property details
@@ -756,5 +755,42 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
 
         // Update the display tiles
         DisplayGridPropertyDetails();
+    }
+
+    /// <summary>
+    /// Returns the crop component if there is a crop growing at the passed in GridPropertyDetails
+    /// </summary>
+    /// <param name="gridPropertyDetails"></param>
+    /// <returns></returns>
+    public Crop GetCropObjectAtGridLocation(GridPropertyDetails gridPropertyDetails)
+    {
+        // Get the world position of the gridPropertyDetails
+        Vector3 worldPosition = grid.GetCellCenterWorld(new Vector3Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY, 0));
+        // Get the colliders overlapping the world position
+        Collider2D[] collider2DArray = Physics2D.OverlapPointAll(worldPosition);
+
+        // Check if we have a crop at this point
+        Crop crop = null;
+        for (int i = 0; i < collider2DArray.Length; i++)
+        {
+            crop = collider2DArray[i].gameObject.GetComponentInParent<Crop>();
+            if (crop != null && crop.cropGridPosition == new Vector2Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY))
+                break;
+            crop = collider2DArray[i].gameObject.GetComponentInChildren<Crop>();
+            if (crop != null && crop.cropGridPosition == new Vector2Int(gridPropertyDetails.GridX, gridPropertyDetails.GridY))
+                break;
+        }
+
+        return crop;
+    }
+
+    /// <summary>
+    /// Returns the cropDetails for the passed in seedItemCode
+    /// </summary>
+    /// <param name="seedItemCode"></param>
+    /// <returns></returns>
+    public CropDetails GetCropDetails(int seedItemCode)
+    {
+        return so_CropDetailsList.GetCropDetails(seedItemCode);
     }
 }
