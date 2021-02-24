@@ -4,7 +4,8 @@
 public enum SceneName
 {
      Scene1_Apartment,
-     Scene2_Roof
+     Scene2_Roof,
+     Scene3_Work
 }
 
 public enum AnimationName
