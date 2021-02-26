@@ -11,12 +11,37 @@ public class ModifyMoney : MonoBehaviour
     // insert some trigger for money to be modified (ex:clicking a buy button in shop)
     // if that is triggered, call UpdateMoney
 
-    void UpdateMoney()
+    // make public to allow buttons to call function
+    public void UpdateMoney()
     {
-        // update money variable
-        moneyController.playerMoney = moneyController.playerMoney - itemPrice;
+        if (moneyController.playerMoney >= itemPrice)
+        {
+            // update money variable
+            moneyController.playerMoney = moneyController.playerMoney - itemPrice;
 
-        // update UI to display new money
-        moneyController.UpdateMoney();
+            // update UI to display new money
+            moneyController.UpdateMoney();
+        }
+        else
+        {
+            // cannot afford item
+        }
     }
+
+    public void UpdateMoneySell()
+    {
+
+        Item item = GameObject.FindGameObjectWithTag(Tags.SellCorn).GetComponent<Item>();
+        //Debug.Log(item);
+        //if inventory contains that item, remove it
+        if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) != -1)
+        {
+            // update money variable
+            moneyController.playerMoney = moneyController.playerMoney - itemPrice;
+
+            // update UI to display new money
+            moneyController.UpdateMoney();
+        }
+    }
+ 
 }
