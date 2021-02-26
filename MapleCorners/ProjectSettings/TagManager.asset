@@ -9,6 +9,8 @@ TagManager:
   - FloorDecoration1
   - FloorDecoration2
   - CropsParentTransform
+  - SellCorn
+  - shopItem
   layers:
   - Default
   - TransparentFX

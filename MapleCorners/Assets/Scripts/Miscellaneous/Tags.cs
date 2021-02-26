@@ -11,4 +11,6 @@ public static class Tags
     public const string FloorDecoration2 = "FloorDecoration2";
 
     public const string CropsParentTransform = "CropsParentTransform";
+    public const string shopItem = "shopItem";
+    public const string SellCorn = "SellCorn";
 }

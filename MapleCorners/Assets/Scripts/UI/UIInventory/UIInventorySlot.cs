@@ -209,6 +209,22 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             }
         }
     }
+
+    public void SellItem()
+    {
+        Item item = GameObject.FindGameObjectWithTag(Tags.shopItem).GetComponent<Item>();
+
+        //if inventory contains that item, remove it
+        if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+        {
+            InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+        }
+        else
+        {
+            // do nothing, no item to sell
+        }
+    }
+
     // looking for left clicks
     public void OnPointerClick(PointerEventData eventData)
     {
