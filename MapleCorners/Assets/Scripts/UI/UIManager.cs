@@ -33,7 +33,7 @@ public class UIManager : SingletonMonoBehavior<UIManager>
     /// </summary>
     private void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.I))
         {
             if (PauseMenuOn)
             {

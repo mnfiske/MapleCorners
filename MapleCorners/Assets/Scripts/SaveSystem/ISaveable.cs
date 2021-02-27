@@ -9,35 +9,47 @@ using UnityEngine;
 /// </summary>
 public interface ISaveable
 {
-  /// <summary>
-  /// Unique ID property
-  /// </summary>
-  string ISaveableID { get; set; }
+      /// <summary>
+      /// Unique ID property
+      /// </summary>
+      string ISaveableID { get; set; }
 
-  /// <summary>
-  /// Object to store the save data for the game object
-  /// </summary>
-  GameObjectSave GameObjectSave { get; set; }
+      /// <summary>
+      /// Object to store the save data for the game object
+      /// </summary>
+      GameObjectSave GameObjectSave { get; set; }
 
-  /// <summary>
-  /// Registers the game object with the SaveLoadManager
-  /// </summary>
-  void ISaveableRegister();
+      /// <summary>
+      /// Registers the game object with the SaveLoadManager
+      /// </summary>
+      void ISaveableRegister();
 
-  /// <summary>
-  /// De-registers the game object from the SaveLoadManager
-  /// </summary>
-  void ISaveableDeregister();
+      /// <summary>
+      /// De-registers the game object from the SaveLoadManager
+      /// </summary>
+      void ISaveableDeregister();
 
-  /// <summary>
-  /// Stores the scene data
-  /// </summary>
-  /// <param name="name"></param>
-  void ISaveableStoreScene(string name);
+      /// <summary>
+      /// Stores the scene data
+      /// </summary>
+      /// <param name="name"></param>
+      void ISaveableStoreScene(string name);
 
-  /// <summary>
-  /// Restores the scene data
-  /// </summary>
-  /// <param name="name"></param>
-  void ISaveableRestoreScene(string name);
+      /// <summary>
+      /// Restores the scene data
+      /// </summary>
+      /// <param name="name"></param>
+      void ISaveableRestoreScene(string name);
+
+    /// <summary>
+    /// Generates the save data
+    /// </summary>
+    /// <returns></returns>
+    GameObjectSave ISaveableSave();
+
+    /// <summary>
+    /// Restores the data
+    /// </summary>
+    /// <param name="gameSave"></param>
+    void ISaveableLoad(GameSave gameSave);
 }
