@@ -9,7 +9,8 @@ using UnityEngine.Tilemaps;
 [ExecuteAlways]
 public class TilemapGridProperties : MonoBehaviour
 {
-  private Tilemap tilemap;
+#if UNITY_EDITOR
+    private Tilemap tilemap;
   //private Grid grid;
   [SerializeField] private SO_GridProperties gridProperties = null;
   [SerializeField] private GridBoolProperty gridBoolProperty = GridBoolProperty.diggable;
@@ -89,4 +90,5 @@ public class TilemapGridProperties : MonoBehaviour
         Debug.Log("Diable property tilemaps");
       }
   }
+#endif
 }
