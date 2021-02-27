@@ -14538,22 +14538,22 @@ MonoBehaviour:
 
     To go to
     bed, move your character onto the bed object. To buy/sell items on the Internet,
-    move your character onto the computer object.
+    move your character onto the chair in front of the computer.
 
 
-    To pick-up items from the
-    ground, walk over them.
+    To pick-up
+    items from the ground, walk over them.
 
 
-    To use a tool in the inventory, left-click the
-    tool on your inventory bar to equip it, then left-click an area to use the tool.
-    If an area is outlined green on hover when the tool is equipped, you can use
-    the tool. If the area is outlined red on hover when the tool is equipped, you
-    cannot currently use the item there.
+    To use a tool in the inventory,
+    left-click the tool on your inventory bar to equip it, then left-click an area
+    to use the tool. If an area is outlined green on hover when the tool is equipped,
+    you can use the tool. If the area is outlined red on hover when the tool is equipped,
+    you cannot currently use the item there.
 
 
-    Click-and-drag an item from your inventory
-    bar to drop the item.'
+    Click-and-drag an item from your
+    inventory bar to drop the item.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cad03051a2ddb4914a2f8d9c013ad1fa, type: 2}
   m_sharedMaterial: {fileID: -149528736890851781, guid: cad03051a2ddb4914a2f8d9c013ad1fa,
