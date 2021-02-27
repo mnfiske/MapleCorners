@@ -3,8 +3,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
+using UnityEngine.SceneManagement;
 
-public class Player : SingletonMonoBehavior<Player>
+public class Player : SingletonMonoBehavior<Player>, ISaveable
 {
     private WaitForSeconds afterUseToolAnimationPause;
     private WaitForSeconds afterLiftToolAnimationPause;
@@ -69,6 +71,12 @@ public class Player : SingletonMonoBehavior<Player>
 
     public bool PlayerInputIsDisabled { get => _playerInputIsDisabled; set => _playerInputIsDisabled = value; }
 
+    private string _iSaveableID;
+    public string ISaveableID { get { return _iSaveableID; } set { _iSaveableID = value; } }
+
+    private GameObjectSave _gameObjectSave;
+    public GameObjectSave GameObjectSave { get { return _gameObjectSave; } set { _gameObjectSave = value; } }
+
     protected override void Awake()
     {
         //calls the absctract class it inherits from
@@ -83,6 +91,11 @@ public class Player : SingletonMonoBehavior<Player>
 
         characterAttributeCustomizationList = new List<CharacterAttribute>();
 
+        // Get a guid and store it in the ISaveableID
+        ISaveableID = GetComponent<GenerateGuid>().Guid;
+
+        GameObjectSave = new GameObjectSave();
+
         //references the main camera
         mainCamera = Camera.main;
     }
@@ -90,6 +103,9 @@ public class Player : SingletonMonoBehavior<Player>
 
     private void OnEnable()
     {
+        // Register with iSaveableObjects
+        ISaveableRegister();
+
         EventHandler.BeforeSceneUnloadFadeOutEvent += DisablePlayerInputAndResetMovement;
         EventHandler.AfterSceneLoadFadeInEvent += EnablePlayerInput;
     }
@@ -97,6 +113,9 @@ public class Player : SingletonMonoBehavior<Player>
 
     private void OnDisable()
     {
+        // Deregister from iSaveableObjects
+        ISaveableDeregister();
+
         EventHandler.BeforeSceneUnloadFadeOutEvent -= DisablePlayerInputAndResetMovement;
         EventHandler.AfterSceneLoadFadeInEvent -= EnablePlayerInput;
     }
@@ -823,6 +842,131 @@ public class Player : SingletonMonoBehavior<Player>
                     break;
             }
         }
+    }
+
+    /// <summary>
+    /// Register the player with ISaveable
+    /// </summary>
+    public void ISaveableRegister()
+    {
+        SaveLoadManager.Instance.iSaveableObjects.Add(this);
+    }
+
+    /// <summary>
+    /// Deregister the player with ISaveable
+    /// </summary>
+    public void ISaveableDeregister()
+    {
+        SaveLoadManager.Instance.iSaveableObjects.Remove(this);
+    }
+
+    public GameObjectSave ISaveableSave()
+    {
+        // Remove existing save data for this scene ifit exists
+        GameObjectSave.SceneData.Remove(Settings.MainScene);
+
+        SceneSave sceneSave = new SceneSave();
+        sceneSave.vector3Dictionary = new Dictionary<string, Vector3Serializable>();
+        sceneSave.stringDictionary = new Dictionary<string, string>();
+
+        // Get the player position and store it in the dictionary
+        Vector3Serializable vector3Serializable = new Vector3Serializable(transform.position.x, transform.position.y, transform.position.z);
+        sceneSave.vector3Dictionary.Add("playerPosition", vector3Serializable);
+
+        // Get the current scene name and store it in the dictionary
+        sceneSave.stringDictionary.Add("currentScene", SceneManager.GetActiveScene().name);
+
+        // Store the player direction in the dictionary
+        sceneSave.stringDictionary.Add("playerDirection", playerDirection.ToString());
+
+        // Add the scene data to the GameObjectSave
+        GameObjectSave.SceneData.Add(Settings.MainScene, sceneSave);
+
+        return GameObjectSave;
+    }
+
+    public void ISaveableLoad(GameSave gameSave)
+    {
+        if (gameSave.gameObjectData.TryGetValue(ISaveableID, out GameObjectSave gameObjectSave))
+        {
+            // Get the main scene save data
+            if (gameObjectSave.SceneData.TryGetValue(Settings.MainScene, out SceneSave sceneSave))
+            {
+                // Check for the player position
+                if (sceneSave.vector3Dictionary != null && sceneSave.vector3Dictionary.TryGetValue("playerPosition", out Vector3Serializable playerPosition))
+                {
+                    // Set the player's position to the saved position
+                    transform.position = new Vector3(playerPosition.x, playerPosition.y, playerPosition.z);
+                }
+
+                // Check for the scene dictionary
+                if (sceneSave.stringDictionary != null)
+                {
+                    // Check for the scene the player was in on save
+                    if (sceneSave.stringDictionary.TryGetValue("currentScene", out string currentScene))
+                    {
+                        // Load the found scene
+                        SceneControllerManager.Instance.FadeAndLoadScene(currentScene, transform.position);
+                    }
+
+                    // Check for the player direction
+                    if (sceneSave.stringDictionary.TryGetValue("playerDirection", out string playerDir))
+                    {
+                        bool playerDirFound = Enum.TryParse<Direction>(playerDir, true, out Direction direction);
+
+                        //Set the player's direction
+                        if (playerDirFound)
+                        {
+                            playerDirection = direction;
+                            SetPlayerDirection(playerDirection);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Sets the direction the player is facing
+    /// </summary>
+    /// <param name="playerDirection"></param>
+    private void SetPlayerDirection(Direction playerDirection)
+    {
+        switch (playerDirection)
+        {
+            case Direction.up:
+                EventHandler.CallMovementEvent(0f, 0f, false, false, false, false, ToolEffect.none, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false);
+
+                break;
+
+            case Direction.down:
+                EventHandler.CallMovementEvent(0f, 0f, false, false, false, false, ToolEffect.none, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false);
+                break;
+
+            case Direction.left:
+                EventHandler.CallMovementEvent(0f, 0f, false, false, false, false, ToolEffect.none, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false);
+                break;
+
+            case Direction.right:
+                EventHandler.CallMovementEvent(0f, 0f, false, false, false, false, ToolEffect.none, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true);
+                break;
+
+            default:
+                EventHandler.CallMovementEvent(0f, 0f, false, false, false, false, ToolEffect.none, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false);
+
+                break;
+        }
+    }
+
+    public void ISaveableStoreScene(string sceneName)
+    {
+        // No scene data to store
+    }
+
+
+    public void ISaveableRestoreScene(string sceneName)
+    {
+        // No scene data to restore
     }
 
     #region Test Methods

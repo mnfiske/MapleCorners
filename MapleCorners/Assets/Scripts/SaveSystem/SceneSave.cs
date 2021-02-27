@@ -7,6 +7,9 @@ using UnityEngine;
 [System.Serializable]
 public class SceneSave
 {
-  public List<SceneItem> ListSceneItem;
-  public Dictionary<string, GridPropertyDetails> GridPropertyDetailsDictionary;
+    public Dictionary<string, bool> boolDictionary;
+    public Dictionary<string, string> stringDictionary;
+    public Dictionary<string, Vector3Serializable> vector3Dictionary;
+    public List<SceneItem> ListSceneItem;
+    public Dictionary<string, GridPropertyDetails> GridPropertyDetailsDictionary;
 }
