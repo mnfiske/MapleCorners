@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,130 +256,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6717192}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6717194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2065655991329320647, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 6717192}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6717195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 449655058134561231, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 6717192}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6717196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 6717192}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6717197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6717194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 931771229}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 0
-  draggedItem: {fileID: 0}
---- !u!114 &6717198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6717195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 931771229}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 0
-  draggedItem: {fileID: 0}
---- !u!114 &6717199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6717196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 1
-  draggedItem: {fileID: 0}
 --- !u!114 &6717200 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 6717192}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6717196}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -392,6 +280,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,52 +403,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 19364448}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &19364450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 19364448}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &19364451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19364450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 2
-  draggedItem: {fileID: 0}
 --- !u!114 &19364452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 19364448}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19364450}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -573,6 +427,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -691,52 +550,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 20450019}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &20450021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 20450019}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &20450022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20450021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 24
-  draggedItem: {fileID: 0}
 --- !u!114 &20450023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 20450019}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20450021}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -754,6 +574,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 43
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -872,52 +697,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 65782354}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &65782356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 65782354}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &65782357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65782356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 43
-  draggedItem: {fileID: 0}
 --- !u!114 &65782358 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 65782354}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65782356}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -1236,6 +1022,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1354,52 +1145,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 112229394}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &112229396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 112229394}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &112229397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112229396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 4
-  draggedItem: {fileID: 0}
 --- !u!114 &112229398 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 112229394}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112229396}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -1572,6 +1324,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1690,52 +1447,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 157694526}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &157694528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 157694526}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &157694529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157694528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 17
-  draggedItem: {fileID: 0}
 --- !u!114 &157694530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 157694526}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157694528}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -2272,6 +1990,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2390,52 +2113,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 287091566}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &287091568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 287091566}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &287091569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287091568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 36
-  draggedItem: {fileID: 0}
 --- !u!114 &287091570 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 287091566}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287091568}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -2705,6 +2389,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2823,52 +2512,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 298847716}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &298847718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 298847716}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &298847719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298847718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 3
-  draggedItem: {fileID: 0}
 --- !u!114 &298847720 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 298847716}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298847718}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -3204,6 +2854,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3322,52 +2977,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 388378782}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &388378784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 388378782}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &388378785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388378784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 11
-  draggedItem: {fileID: 0}
 --- !u!114 &388378786 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 388378782}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388378784}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -3485,6 +3101,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3603,52 +3224,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 473035488}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &473035490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 473035488}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &473035491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473035490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 35
-  draggedItem: {fileID: 0}
 --- !u!114 &473035492 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 473035488}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473035490}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -3996,6 +3578,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4114,52 +3701,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 499548602}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &499548604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 499548602}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &499548605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499548604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 32
-  draggedItem: {fileID: 0}
 --- !u!114 &499548606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 499548602}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499548604}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -4177,6 +3725,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4295,52 +3848,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 502075423}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &502075425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 502075423}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &502075426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502075425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 28
-  draggedItem: {fileID: 0}
 --- !u!114 &502075427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 502075423}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502075425}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -4653,6 +4167,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 29
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4771,52 +4290,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 545424391}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &545424393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 545424391}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &545424394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545424393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 29
-  draggedItem: {fileID: 0}
 --- !u!114 &545424395 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 545424391}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545424393}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -5126,6 +4606,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5244,52 +4729,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 611645960}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &611645962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 611645960}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &611645963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611645962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 46
-  draggedItem: {fileID: 0}
 --- !u!114 &611645964 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 611645960}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611645962}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -5307,6 +4753,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5425,52 +4876,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 613183971}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &613183973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 613183971}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &613183974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613183973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 31
-  draggedItem: {fileID: 0}
 --- !u!114 &613183975 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 613183971}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613183973}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -5488,6 +4900,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 41
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5606,52 +5023,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 619999042}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &619999044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 619999042}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &619999045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619999044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 41
-  draggedItem: {fileID: 0}
 --- !u!114 &619999046 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 619999042}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619999044}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -6207,6 +5585,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6325,52 +5708,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 649377407}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &649377409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 649377407}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &649377410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649377409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 14
-  draggedItem: {fileID: 0}
 --- !u!114 &649377411 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 649377407}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649377409}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -6474,6 +5818,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6592,52 +5941,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 690681604}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &690681606 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 690681604}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &690681607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690681606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 45
-  draggedItem: {fileID: 0}
 --- !u!114 &690681608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 690681604}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690681606}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -7238,6 +6548,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7356,52 +6671,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 814478609}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &814478611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 814478609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &814478612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814478611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 39
-  draggedItem: {fileID: 0}
 --- !u!114 &814478613 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 814478609}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814478611}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -7419,6 +6695,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7537,52 +6818,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 822019181}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &822019183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 822019181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &822019184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822019183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 25
-  draggedItem: {fileID: 0}
 --- !u!114 &822019185 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 822019181}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822019183}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -7713,6 +6955,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7831,52 +7078,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 878021756}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &878021758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 878021756}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &878021759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878021758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 26
-  draggedItem: {fileID: 0}
 --- !u!114 &878021760 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 878021756}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878021758}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -7967,6 +7175,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8085,52 +7298,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 909574276}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &909574278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 909574276}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &909574279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909574278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 10
-  draggedItem: {fileID: 0}
 --- !u!114 &909574280 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 909574276}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909574278}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -8335,6 +7509,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8453,52 +7632,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 947157565}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &947157567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 947157565}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &947157568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947157567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 38
-  draggedItem: {fileID: 0}
 --- !u!114 &947157569 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 947157565}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947157567}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -8669,6 +7809,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 42
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8787,52 +7932,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 953649747}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &953649749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 953649747}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &953649750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953649749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 42
-  draggedItem: {fileID: 0}
 --- !u!114 &953649751 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 953649747}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953649749}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -8850,6 +7956,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8968,52 +8079,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 970942643}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &970942645 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 970942643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &970942646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970942645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 22
-  draggedItem: {fileID: 0}
 --- !u!114 &970942647 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 970942643}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970942645}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -9405,6 +8477,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9523,52 +8600,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1039344686}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1039344688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1039344686}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1039344689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039344688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 6
-  draggedItem: {fileID: 0}
 --- !u!114 &1039344690 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1039344686}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039344688}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -9586,6 +8624,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 47
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9704,52 +8747,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1041873879}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1041873881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1041873879}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1041873882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041873881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 47
-  draggedItem: {fileID: 0}
 --- !u!114 &1041873883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1041873879}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041873881}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -10433,6 +9437,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10551,52 +9560,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1215732529}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1215732531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1215732529}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1215732532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215732531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 40
-  draggedItem: {fileID: 0}
 --- !u!114 &1215732533 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1215732529}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215732531}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -10614,6 +9584,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10732,52 +9707,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1261197721}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1261197723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1261197721}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1261197724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261197723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 9
-  draggedItem: {fileID: 0}
 --- !u!114 &1261197725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1261197721}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261197723}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -10961,6 +9897,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11079,52 +10020,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1284211840}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1284211842 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1284211840}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1284211843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284211842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 15
-  draggedItem: {fileID: 0}
 --- !u!114 &1284211844 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1284211840}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284211842}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -11177,6 +10079,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11295,52 +10202,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1324753907}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1324753909 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1324753907}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1324753910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324753909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 30
-  draggedItem: {fileID: 0}
 --- !u!114 &1324753911 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1324753907}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324753909}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -11513,6 +10381,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11631,52 +10504,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1358916748}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1358916750 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1358916748}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1358916751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358916750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 19
-  draggedItem: {fileID: 0}
 --- !u!114 &1358916752 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1358916748}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358916750}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -11694,6 +10528,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11812,52 +10651,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1364219537}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1364219539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364219537}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1364219540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364219539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 18
-  draggedItem: {fileID: 0}
 --- !u!114 &1364219541 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1364219537}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364219539}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -12028,6 +10828,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12146,52 +10951,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1397904300}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1397904302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1397904300}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1397904303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397904302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 23
-  draggedItem: {fileID: 0}
 --- !u!114 &1397904304 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1397904300}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397904302}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -12209,6 +10975,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12327,52 +11098,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1413290412}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1413290414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1413290412}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1413290415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413290414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 21
-  draggedItem: {fileID: 0}
 --- !u!114 &1413290416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1413290412}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413290414}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -12425,6 +11157,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 44
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12543,52 +11280,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1450600524}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1450600526 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450600524}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1450600527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450600526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 44
-  draggedItem: {fileID: 0}
 --- !u!114 &1450600528 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1450600524}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450600526}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -13285,6 +11983,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13403,52 +12106,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1541783950}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1541783952 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1541783950}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1541783953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541783952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 7
-  draggedItem: {fileID: 0}
 --- !u!114 &1541783954 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1541783950}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541783952}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -13532,6 +12196,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13650,52 +12319,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1578830036}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1578830038 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1578830036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1578830039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578830038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 8
-  draggedItem: {fileID: 0}
 --- !u!114 &1578830040 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1578830036}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578830038}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -13713,6 +12343,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13831,52 +12466,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1604453005}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1604453007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1604453005}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1604453008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604453007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 5
-  draggedItem: {fileID: 0}
 --- !u!114 &1604453009 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1604453005}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604453007}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -14090,6 +12686,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14208,52 +12809,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1661664120}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1661664122 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1661664120}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1661664123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661664122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 16
-  draggedItem: {fileID: 0}
 --- !u!114 &1661664124 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1661664120}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661664122}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -14455,6 +13017,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14573,52 +13140,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1701051189}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1701051191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1701051189}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1701051192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701051191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 13
-  draggedItem: {fileID: 0}
 --- !u!114 &1701051193 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1701051189}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701051191}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -14761,6 +13289,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14879,52 +13412,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1723249747}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1723249749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1723249747}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1723249750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723249749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 20
-  draggedItem: {fileID: 0}
 --- !u!114 &1723249751 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1723249747}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723249749}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -15348,6 +13842,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 37
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15466,52 +13965,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1879791257}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1879791259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1879791257}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1879791260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879791259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 37
-  draggedItem: {fileID: 0}
 --- !u!114 &1879791261 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1879791257}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879791259}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -16492,6 +14952,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16610,52 +15075,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1970962496}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1970962498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1970962496}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1970962499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970962498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 33
-  draggedItem: {fileID: 0}
 --- !u!114 &1970962500 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1970962496}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970962498}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -16826,6 +15252,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16944,52 +15375,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1985123887}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1985123889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 1985123887}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1985123890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985123889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 34
-  draggedItem: {fileID: 0}
 --- !u!114 &1985123891 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 1985123887}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985123889}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -17080,6 +15472,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17198,52 +15595,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2046728971}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2046728973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 2046728971}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2046728974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046728973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 27
-  draggedItem: {fileID: 0}
 --- !u!114 &2046728975 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 2046728971}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046728973}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -17379,6 +15737,11 @@ PrefabInstance:
       propertyPath: inventoryManagement
       value: 
       objectReference: {fileID: 931771229}
+    - target: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: slotNumber
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3186252823147200125, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17497,52 +15860,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2128473499}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2128473501 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 2128473499}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2128473502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128473501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 12
-  draggedItem: {fileID: 0}
 --- !u!114 &2128473503 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 2128473499}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128473501}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
@@ -17665,6 +15989,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3648739735621245066, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648739735621245066, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648739735621245066, guid: b4ca9b4a182d2384e9e7ac89d8610442,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
         type: 3}
       propertyPath: m_Name
@@ -17678,52 +16017,13 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2780785037858256708}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2780785037858256710 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694002605545819945, guid: b4ca9b4a182d2384e9e7ac89d8610442,
-    type: 3}
-  m_PrefabInstance: {fileID: 2780785037858256708}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2780785037858256711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780785037858256710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManagementSlotImage: {fileID: 0}
-  textMeshProUGUI: {fileID: 0}
-  greyedOutImageGO: {fileID: 0}
-  inventoryManagement: {fileID: 0}
-  inventoryTextBoxPrefab: {fileID: 0}
-  itemDetails:
-    itemCode: 0
-    itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
-    itemLongDescription: 
-    itemUseGridRadius: 0
-    itemUseRadius: 0
-    isStartingItem: 0
-    canBePickedUp: 0
-    canBeDropped: 0
-    canBeEaten: 0
-    canBeCarried: 0
-  itemQuantity: 0
-  slotNumber: 0
-  draggedItem: {fileID: 0}
 --- !u!114 &2780785037858256712 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2960195092663119660, guid: b4ca9b4a182d2384e9e7ac89d8610442,
     type: 3}
   m_PrefabInstance: {fileID: 2780785037858256708}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780785037858256710}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f05875891713d4881904453d762dab, type: 3}

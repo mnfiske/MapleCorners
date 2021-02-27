@@ -257,10 +257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ac513c1c5844f1894f971f0c22e59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draggedItem: {fileID: 0}
   inventorySlotHighlight: {fileID: 4729196439020372619}
   inventorySlotImage: {fileID: 4729196438987026990}
   textMeshProUGUI: {fileID: 4729196438438925788}
   inventoryBar: {fileID: 0}
+  inventoryTextboxPrefab: {fileID: 0}
   itemPrefab: {fileID: 6155678225489266874, guid: 651f2f4595abcff46a7c9f64859030a2,
     type: 3}
   itemDetails:
@@ -277,6 +279,8 @@ MonoBehaviour:
     canBeEaten: 0
     canBeCarried: 0
   itemQuantity: 0
+  isSelected: 0
+  slotNumber: 0
 --- !u!1 &4729196439020372617
 GameObject:
   m_ObjectHideFlags: 0
