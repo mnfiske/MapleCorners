@@ -16,4 +16,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("quit game");
         Application.Quit();
     }
+
+    public void callLoadGame()
+    {
+        SaveLoadManager.Instance.LoadDataFromFile();
+    }
 }

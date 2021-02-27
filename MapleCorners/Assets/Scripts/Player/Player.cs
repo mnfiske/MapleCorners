@@ -862,7 +862,7 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
 
     public GameObjectSave ISaveableSave()
     {
-        // Remove existing save data for this scene ifit exists
+        // Remove existing save data for this scene if it exists
         GameObjectSave.SceneData.Remove(Settings.MainScene);
 
         SceneSave sceneSave = new SceneSave();

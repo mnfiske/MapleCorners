@@ -12,4 +12,6 @@ public class SceneSave
     public Dictionary<string, Vector3Serializable> vector3Dictionary;
     public List<SceneItem> ListSceneItem;
     public Dictionary<string, GridPropertyDetails> GridPropertyDetailsDictionary;
+    public List<InventoryItem>[] ListInvItemArray;
+    public Dictionary<string, int[]> intArrayDictionary;
 }
