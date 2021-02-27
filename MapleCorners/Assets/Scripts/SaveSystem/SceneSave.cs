@@ -14,4 +14,7 @@ public class SceneSave
     public Dictionary<string, GridPropertyDetails> GridPropertyDetailsDictionary;
     public List<InventoryItem>[] ListInvItemArray;
     public Dictionary<string, int[]> intArrayDictionary;
+    public Dictionary<string, int> clockData;
+    public float energyData;
+    public float moneyData;
 }

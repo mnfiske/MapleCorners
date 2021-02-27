@@ -1469,6 +1469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160573791}
   - component: {fileID: 160573790}
+  - component: {fileID: 160573792}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -1498,12 +1499,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160573789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6233147, y: -0.28743935, z: -353.21094}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160573792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160573789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3797e43f201d2e04dabd513d30ec9b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: fcd008b9-eb4d-49b9-986a-017ff8f5c398
 --- !u!1 &165405160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3402,6 +3416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491210725}
   - component: {fileID: 491210724}
+  - component: {fileID: 491210726}
   m_Layer: 0
   m_Name: MoneyController
   m_TagString: Untagged
@@ -3437,6 +3452,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &491210726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491210723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3797e43f201d2e04dabd513d30ec9b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: eb0b8321-ab4b-4653-8e08-b1429759a854
 --- !u!1 &497559261
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,6 +4434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573460167}
   - component: {fileID: 573460166}
+  - component: {fileID: 573460168}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -4439,6 +4468,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &573460168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573460165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3797e43f201d2e04dabd513d30ec9b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 7343ee3c-2353-4d58-a884-e4365e7d5252
 --- !u!1 &610432271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6348,7 +6390,7 @@ MonoBehaviour:
   fadeDuration: 0.25
   faderCanvasGroup: {fileID: 649437480}
   faderImage: {fileID: 649437481}
-  startingSceneName: 3
+  startingSceneName: 0
 --- !u!1001 &773051126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7091,6 +7133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869592544}
   - component: {fileID: 869592543}
+  - component: {fileID: 869592545}
   m_Layer: 0
   m_Name: EnergyController
   m_TagString: Untagged
@@ -7126,6 +7169,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869592545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869592542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3797e43f201d2e04dabd513d30ec9b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1d0e74bc-062d-4b2f-b8ef-ef592fe39a07
 --- !u!1001 &878021756
 PrefabInstance:
   m_ObjectHideFlags: 0
