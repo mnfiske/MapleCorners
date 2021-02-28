@@ -96405,7 +96405,7 @@ GameObject:
   - component: {fileID: 6327400867425570822}
   - component: {fileID: 6327400867425570823}
   m_Layer: 0
-  m_Name: SceneTeleporter (Roof)
+  m_Name: SceneTeleporter (Home)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
