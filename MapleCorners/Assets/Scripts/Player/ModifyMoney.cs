@@ -4,7 +4,8 @@ using UnityEngine;
 public class ModifyMoney : MonoBehaviour
 {
     // Setting up an example for when we have objects to actually modify money (selling/buying)
-    
+
+    [SerializeField] private float workMoney;
     [SerializeField] private float itemPrice;
     [SerializeField] private MoneyAttribute moneyController;
 
@@ -26,6 +27,22 @@ public class ModifyMoney : MonoBehaviour
         {
             // cannot afford item
         }
+    }
+
+    // Allow specific amounts to be added to money
+    private void UpdateMoney(float amount)
+    {
+        // update money variable
+        moneyController.playerMoney += amount;
+
+        // update UI to display new money
+        moneyController.UpdateMoney();
+    }
+
+    // Run from work
+    public void GiveWorkMoney()
+    {
+        UpdateMoney(workMoney);
     }
 
     public void UpdateMoneySell()
