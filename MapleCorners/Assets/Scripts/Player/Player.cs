@@ -400,6 +400,12 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
         }
     }
 
+
+    private void reduceEnergyFromToolUse()
+    {
+        EnergyController.Instance.SetEnergy(EnergyController.Instance.GetEnergy() - 5f);
+    }
+
     /// <summary>
     /// Triggers a coroutine to start the hoe animation & updates the tiles display
     /// </summary>
@@ -410,6 +416,8 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
         StartCoroutine(HoeGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
 
         GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
+
+        reduceEnergyFromToolUse();
     }
 
     /// <summary>
@@ -462,7 +470,7 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
 
         // Update the tile display
         GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
-        
+
         // Pause
         yield return afterUseToolAnimationPause;
 
@@ -479,6 +487,8 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     private void WaterGroundAtCursor(GridPropertyDetails gridPropertyDetails, Vector3Int playerDirection)
     {
         StartCoroutine(WaterGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
+
+        reduceEnergyFromToolUse();
     }
 
     /// <summary>
@@ -552,6 +562,8 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     private void CollectInPlayerDirection(GridPropertyDetails gridPropertyDetails, ItemDetails equippedItemDetails, Vector3Int playerDirection)
     {
         StartCoroutine(CollectInPlayerDirectionRoutine(gridPropertyDetails, equippedItemDetails, playerDirection));
+
+        reduceEnergyFromToolUse();
     }
 
     private IEnumerator CollectInPlayerDirectionRoutine(GridPropertyDetails gridPropertyDetails, ItemDetails equippedItemDetails, Vector3Int playerDirection)
@@ -709,6 +721,8 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     private void ReapInPlayerDirectionAtCursor(ItemDetails itemDetails, Vector3Int playerDirection)
     {
         StartCoroutine(ReapInPlayerDirectionAtCursorRoutine(itemDetails, playerDirection));
+
+        reduceEnergyFromToolUse();
     }
 
 
