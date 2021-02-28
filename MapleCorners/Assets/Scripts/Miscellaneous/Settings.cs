@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class Settings
 {
+    public const string MainScene = "MainScene";
+
     // Obscuring item fading - Fade in and out settings. % transparency
     public const float fadeInSeconds = 0.25f;
     public const float fadeOutSeconds = 0.35f;

@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Inherits from Abstract class of game object
-public class InventoryManager : SingletonMonoBehavior<InventoryManager>
+public class InventoryManager : SingletonMonoBehavior<InventoryManager>, ISaveable
 {
+    private UIInventoryBar inventoryBar;
+    
     // dictionary to hold items in scriptable object list
     private Dictionary<int, ItemDetails> itemDetailsDictionary;
 
@@ -17,6 +19,12 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     [HideInInspector] public int[] inventoryListCapacityIntArray;
 
     [SerializeField] private SO_ItemList itemList = null;
+
+    private string _iSaveableID;
+    public string ISaveableID { get { return _iSaveableID; } set { _iSaveableID = value; } }
+
+    private GameObjectSave _gameObjectSave;
+    public GameObjectSave GameObjectSave { get { return _gameObjectSave; } set { _gameObjectSave = value; } }
 
     // awake occurs before start, ensures that Item Details Dictionary will be created first
     protected override void Awake()
@@ -35,6 +43,26 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
         {
             selectedInventoryItem[i] = -1;
         }
+
+        // Get a guid and store it in the ISaveableID
+        ISaveableID = GetComponent<GenerateGuid>().Guid;
+
+        GameObjectSave = new GameObjectSave();
+    }
+
+    private void OnEnable()
+    {
+        ISaveableRegister();
+    }
+
+    private void OnDisable()
+    {
+        ISaveableDeregister();
+    }
+
+    private void Start()
+    {
+        inventoryBar = FindObjectOfType<UIInventoryBar>();
     }
 
     private void CreateInventoryLists()
@@ -302,6 +330,88 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>
     public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
     {
         selectedInventoryItem[(int)inventoryLocation] = itemCode;
+    }
+
+    /// <summary>
+    /// Register the inventory with ISaveable
+    /// </summary>
+    public void ISaveableRegister()
+    {
+        SaveLoadManager.Instance.iSaveableObjects.Add(this);
+    }
+
+    /// <summary>
+    /// Deregister the inventory with ISaveable
+    /// </summary>
+    public void ISaveableDeregister()
+    {
+        SaveLoadManager.Instance.iSaveableObjects.Remove(this);
+    }
+
+    public GameObjectSave ISaveableSave()
+    {
+        // Remove existing save data for this scene if it exists
+        GameObjectSave.SceneData.Remove(Settings.MainScene);
+
+        // Store inventoryLists in the SceneSave object
+        SceneSave sceneSave = new SceneSave();
+        sceneSave.ListInvItemArray = inventoryLists;
+
+        // Save the maximum capacities of the invventory
+        sceneSave.intArrayDictionary = new Dictionary<string, int[]>();
+        sceneSave.intArrayDictionary.Add("inventoryListCapacityArray", inventoryListCapacityIntArray);
+
+        // Add the scene data to the GameObjectSave
+        GameObjectSave.SceneData.Add(Settings.MainScene, sceneSave);
+
+        return GameObjectSave;
+    }
+
+    public void ISaveableLoad(GameSave gameSave)
+    {
+        // Check the save data for the game object
+        if (gameSave.gameObjectData.TryGetValue(ISaveableID, out GameObjectSave gameObjectSave))
+        {
+            GameObjectSave = gameObjectSave;
+
+            // Get the data from the main scene--this is where the inventory is stored
+            if (gameObjectSave.SceneData.TryGetValue(Settings.MainScene, out SceneSave sceneSave))
+            {
+                // Check if we have our inventory items list
+                if (sceneSave.ListInvItemArray != null)
+                {
+                    inventoryLists = sceneSave.ListInvItemArray;
+
+                    //  Update the inventory
+                    for (int i = 0; i < (int)InventoryLocation.count; i++)
+                    {
+                        EventHandler.CallInventoryUpdatedEvent((InventoryLocation)i, inventoryLists[i]);
+                    }
+
+                    // Clear any carried items or highlights
+                    Player.Instance.ClearCarriedItem();
+                    inventoryBar.ClearHighlightOnInventorySlots();
+                }
+
+                // Check for the inventoryListCapacityIntArray
+                if (sceneSave.intArrayDictionary != null && sceneSave.intArrayDictionary.TryGetValue("inventoryListCapacityArray", out int[] inventoryCapacityArray))
+                {
+                    // Set the inventoryListCapacityIntArray
+                    inventoryListCapacityIntArray = inventoryCapacityArray;
+                }
+            }
+
+        }
+    }
+
+    public void ISaveableStoreScene(string sceneName)
+    {
+        // No scene data to store
+    }
+
+    public void ISaveableRestoreScene(string sceneName)
+    {
+        // No scene data to restore
     }
 
     //print inventory items to console for debugging

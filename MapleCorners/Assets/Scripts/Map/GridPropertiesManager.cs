@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(GenerateGuid))]
 public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager>, ISaveable
@@ -686,7 +687,7 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
     /// <param name="sceneName"></param>
     public void ISaveableRestoreScene(string sceneName)
     {
-    // Check if SceneData already exists for the scene
+        // Check if SceneData already exists for the scene
         if (GameObjectSave.SceneData.TryGetValue(sceneName, out SceneSave sceneSave))
         {
             // If so, check if that SceneData has a GridPropertyDetailsDictionary
@@ -705,6 +706,35 @@ public class GridPropertiesManager : SingletonMonoBehavior<GridPropertiesManager
                 DisplayGridPropertyDetails();
             }
         }
+    }
+
+    /// <summary>
+    /// Restores the data for the current scene
+    /// </summary>
+    /// <param name="gameSave"></param>
+    public void ISaveableLoad(GameSave gameSave)
+    {
+        // Try to get the value with the key of the ISaveableID
+        if (gameSave.gameObjectData.TryGetValue(ISaveableID, out GameObjectSave gameObjectSave))
+        {
+            // If we got an object, store it in GameObjectSave
+            GameObjectSave = gameObjectSave;
+
+            // For the current scene, restore the data
+            ISaveableRestoreScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    /// <summary>
+    /// Generate the save data
+    /// </summary>
+    /// <returns></returns>
+    public GameObjectSave ISaveableSave()
+    {
+        // Store the data for the current scene
+        ISaveableStoreScene(SceneManager.GetActiveScene().name);
+
+        return GameObjectSave;
     }
 
     /// <summary>
