@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 115631056}
   - component: {fileID: 115631055}
   - component: {fileID: 115631054}
+  - component: {fileID: 115631057}
+  - component: {fileID: 115631058}
   m_Layer: 0
   m_Name: SceneTeleporter (Home)
   m_TagString: Untagged
@@ -193,6 +195,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &115631057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115631053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d381408d3dbbfb4db84a6b3b75ac6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workMoney: 10
+--- !u!114 &115631058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115631053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64683a3c2a5c9f4cad5f4cf3dc499f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetHour: 18
 --- !u!1 &770072414
 GameObject:
   m_ObjectHideFlags: 0

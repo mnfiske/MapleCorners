@@ -682,6 +682,11 @@ PrefabInstance:
       propertyPath: bedEnergy
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5308774484663421459, guid: c392fc3cffd6f064ab8ac51050133e04,
+        type: 3}
+      propertyPath: targetHour
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6579523450692219868, guid: c392fc3cffd6f064ab8ac51050133e04,
         type: 3}
       propertyPath: sceneNameGoto

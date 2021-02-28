@@ -153,13 +153,13 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>, ISaveable
         }
     }
 
-    // test script to increment time to 6am
-    public void AdvanceToNextDay()
+    // test script to increment time to specific hour
+    public void AdvanceToTime(int targetHour)
     {
         //Debug.Log("Made it here");
         //Debug.Log("Hour: " + hour + "Minute: " + minute + "second: " + second);
         //Debug.Log("Is this true? " + (hour != 6 && minute != 0 && second != 0) );
-        while ( !(hour == 6 && minute == 0 && second == 0) )
+        while (!(hour == targetHour && minute == 0 && second == 0))
         {
             //Debug.Log("incrementing...");
             updateTime();
