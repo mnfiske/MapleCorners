@@ -68,9 +68,40 @@ public class MesObjectPooler : MonoBehaviour
 		// Get object out of pool
 		GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 		objectToSpawn.SetActive(true);
+		objectToSpawn.AddComponent<ModifyPlayerSpeed>();
 		objectToSpawn.transform.position = newRandomPosition;
 
 		poolDictionary[tag].Enqueue(objectToSpawn);
 		return objectToSpawn;
+	}
+
+	// Check that pool has minimum number of objects
+	public void RefillPool(string tag)
+	{
+		// check if tag exists
+		if (!poolDictionary.ContainsKey(tag))
+		{
+			Debug.LogWarning("Pool with tag " + tag + " doesn't exist");
+		}
+
+		foreach (Pool pool in pools)
+		{
+			Queue<GameObject> objectPool = new Queue<GameObject>();
+
+			// Empty Queueue
+			poolDictionary[tag].Clear();
+
+			// Instantiate objects to reach pool size
+			for (int i = 0; i < pool.size; i++)
+			{
+				GameObject obj = Instantiate(pool.prefab);
+				obj.SetActive(false);
+				// Need to explicitly add script
+				obj.AddComponent<ModifyPlayerSpeed>();
+
+				// Add to queue
+				poolDictionary[tag].Enqueue(obj);
+			}
+		}
 	}
 }

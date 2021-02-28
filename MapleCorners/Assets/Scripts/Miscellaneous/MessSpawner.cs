@@ -23,10 +23,17 @@ public class MessSpawner : SingletonMonoBehavior<MessSpawner>
     }
 
     // Make the messes
-    private void dailyMesses()
+    private void dailyMesses(int gameYear, Season gameSeason, int gameDay, Weekday gameDayOfWeek, int gameHour, int gameMinute, int gameSecond)
     {
-		objectPooler.SpawnFromPool("Mess1");
-	}
+        // be sure queue is full
+        objectPooler.RefillPool("Mess1");
+
+        // spawn random number of items
+        for (int i = 0; i < Random.Range(2, 5); i++)
+        {
+            objectPooler.SpawnFromPool("Mess1");
+        }
+    }
 
 
 
