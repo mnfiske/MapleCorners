@@ -11,7 +11,7 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Transform parentItem;
     private GridCursor gridCursor;
     private Cursor cursor;
-    private GameObject draggedItem;
+    public GameObject draggedItem;
     private Canvas parentCanvas;
 
     public Image inventorySlotHighlight;
