@@ -12,6 +12,8 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     private WaitForSeconds afterLiftToolAnimationPause;
     private WaitForSeconds afterPickAnimationPause;
 
+    private float toolUseAmount = 5f;
+
     private AnimationOverrides animationOverrides;
     private GridCursor gridCursor;
     private Cursor cursor;
@@ -400,6 +402,20 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
         }
     }
 
+
+    private bool hasEnergyToUseTool()
+    {
+        float currentPlayerEnergy = EnergyController.Instance.GetEnergy();
+        bool canUseTool = currentPlayerEnergy >= toolUseAmount;
+
+        if (canUseTool)
+        {
+            EnergyController.Instance.SetEnergy(EnergyController.Instance.GetEnergy() - toolUseAmount);
+        }
+
+        return canUseTool;
+    }
+
     /// <summary>
     /// Triggers a coroutine to start the hoe animation & updates the tiles display
     /// </summary>
@@ -407,9 +423,12 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     /// <param name="playerDirection"></param>
     private void HoeGroundAtCursor(GridPropertyDetails gridPropertyDetails, Vector3Int playerDirection)
     {
-        StartCoroutine(HoeGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
+        if (hasEnergyToUseTool())
+        {
+            StartCoroutine(HoeGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
 
-        GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
+            GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
+        }
     }
 
     /// <summary>
@@ -462,7 +481,7 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
 
         // Update the tile display
         GridPropertiesManager.Instance.DisplayDugGround(gridPropertyDetails);
-        
+
         // Pause
         yield return afterUseToolAnimationPause;
 
@@ -478,7 +497,10 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     /// <param name="playerDirection"></param>
     private void WaterGroundAtCursor(GridPropertyDetails gridPropertyDetails, Vector3Int playerDirection)
     {
-        StartCoroutine(WaterGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
+        if (hasEnergyToUseTool())
+        { 
+            StartCoroutine(WaterGroundAtCursorRoutine(playerDirection, gridPropertyDetails));
+        }
     }
 
     /// <summary>
@@ -551,7 +573,10 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     /// <param name="playerDirection"></param>
     private void CollectInPlayerDirection(GridPropertyDetails gridPropertyDetails, ItemDetails equippedItemDetails, Vector3Int playerDirection)
     {
-        StartCoroutine(CollectInPlayerDirectionRoutine(gridPropertyDetails, equippedItemDetails, playerDirection));
+        if (hasEnergyToUseTool())
+        {
+            StartCoroutine(CollectInPlayerDirectionRoutine(gridPropertyDetails, equippedItemDetails, playerDirection));
+        }
     }
 
     private IEnumerator CollectInPlayerDirectionRoutine(GridPropertyDetails gridPropertyDetails, ItemDetails equippedItemDetails, Vector3Int playerDirection)
@@ -708,7 +733,10 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
 
     private void ReapInPlayerDirectionAtCursor(ItemDetails itemDetails, Vector3Int playerDirection)
     {
-        StartCoroutine(ReapInPlayerDirectionAtCursorRoutine(itemDetails, playerDirection));
+        if (hasEnergyToUseTool())
+        {
+            StartCoroutine(ReapInPlayerDirectionAtCursorRoutine(itemDetails, playerDirection));
+        }
     }
 
 
