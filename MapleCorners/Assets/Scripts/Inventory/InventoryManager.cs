@@ -123,6 +123,12 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>, ISaveab
         Destroy(gameObjectToDelete);
     }
 
+    /// Add an item to the inventory list without destroying item as the same item is used for multiple purchases
+    public void AddBoughtItem(InventoryLocation inventoryLocation, Item item, GameObject gameObjectToDelete)
+    {
+        AddItem(inventoryLocation, item);
+    }
+
     /// Add an item to the inventory list for the inventoryLocation
     public void AddItem(InventoryLocation inventoryLocation, Item item)
     {
