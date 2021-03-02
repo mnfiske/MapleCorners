@@ -24,10 +24,19 @@ public class ModifyMoney : MonoBehaviour
             // update UI to display new money
             moneyController.UpdateMoney();
 
-            //Item item = GameObject.FindGameObjectWithTag(Tags.shopItem).GetComponent<Item>();
-            Item item = GameObject.Find(itemname).GetComponent<Item>();
-            //Debug.Log(item);
-            InventoryManager.Instance.AddBoughtItem(InventoryLocation.player, item, GameObject.Find(itemname));
+            // if the player purchases the ticket to end the game, display the winning message
+            if (itemname == "ticket")
+            {
+                GameObject endingMessage = GameObject.Find("Ticket");
+                GameObject msg = endingMessage.transform.Find("CongratsMessage").gameObject;
+                msg.SetActive(true);
+            }
+            else
+            {
+                Item item = GameObject.Find(itemname).GetComponent<Item>();
+
+                InventoryManager.Instance.AddBoughtItem(InventoryLocation.player, item, GameObject.Find(itemname));
+            }
         }
         else
         {
