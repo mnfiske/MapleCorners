@@ -11,6 +11,7 @@ TagManager:
   - CropsParentTransform
   - SellCorn
   - shopItem
+  - ShopCanvas
   layers:
   - Default
   - TransparentFX

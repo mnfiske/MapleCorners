@@ -197,7 +197,7 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>, ISaveab
         inventoryItem.itemQuantity = 1;
         inventoryList.Add(inventoryItem);
 
-        DebugPrintInventoryList(inventoryList);
+        //DebugPrintInventoryList(inventoryList);
     }
 
     /// Add item to position in the inventory
@@ -422,13 +422,13 @@ public class InventoryManager : SingletonMonoBehavior<InventoryManager>, ISaveab
 
     //print inventory items to console for debugging
     //commented out now that invetory bar UI updates with items that are picked up
-    private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
-    {
-        foreach (InventoryItem inventoryItem in inventoryList)
-        {
-            Debug.Log("Item Description:" + InventoryManager.Instance.GetItemDetails(inventoryItem.itemCode).itemDescription + "    Item Quantity: " + inventoryItem.itemQuantity);
-        }
-        Debug.Log("****************************************************************");
-    }
+    //private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
+    //{
+    //    foreach (InventoryItem inventoryItem in inventoryList)
+    //    {
+    //        Debug.Log("Item Description:" + InventoryManager.Instance.GetItemDetails(inventoryItem.itemCode).itemDescription + "    Item Quantity: " + inventoryItem.itemQuantity);
+    //    }
+    //    Debug.Log("****************************************************************");
+    //}
 
 }
