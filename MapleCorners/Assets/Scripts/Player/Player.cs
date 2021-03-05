@@ -12,7 +12,7 @@ public class Player : SingletonMonoBehavior<Player>, ISaveable
     private WaitForSeconds afterLiftToolAnimationPause;
     private WaitForSeconds afterPickAnimationPause;
 
-    private float toolUseAmount = 5f;
+    private float toolUseAmount = 2f;
 
     private AnimationOverrides animationOverrides;
     private GridCursor gridCursor;
