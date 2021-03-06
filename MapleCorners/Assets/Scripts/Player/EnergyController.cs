@@ -29,7 +29,7 @@ public class EnergyController : SingletonMonoBehavior<EnergyController>, ISaveab
     private void Start()
     {
         // Set Initial Energy Level
-        playerEnergy = 5f;
+        playerEnergy = 100f;
 
         UpdateEnergy();
     }
