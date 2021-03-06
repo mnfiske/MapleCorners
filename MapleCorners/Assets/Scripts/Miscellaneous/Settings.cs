@@ -30,7 +30,7 @@ public static class Settings
     public static int playerMaximumInventoryCapacity = 48;
 
     //Tools
-    public const string HoeingTool = "Hoe";
+    public const string HoeingTool = "Trowel";
     public const string ChoppingTool = "Axe";
     public const string BreakingTool = "Pickaxe";
     public const string ReapingTool = "Broom";
