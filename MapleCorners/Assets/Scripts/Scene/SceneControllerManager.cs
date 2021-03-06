@@ -69,6 +69,8 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
         // call after scene load event
         EventHandler.CallAfterSceneLoadEvent();
 
+        EventHandler.CallAfterSceneConfinerLoadEvent();
+
         // Restore the new scene data
         SaveLoadManager.Instance.RestoreCurrentSceneData();
 
@@ -102,6 +104,8 @@ public class SceneControllerManager : SingletonMonoBehavior<SceneControllerManag
 
         // Call events for subscribers
         EventHandler.CallAfterSceneLoadEvent();
+
+        EventHandler.CallAfterSceneConfinerLoadEvent();
 
         // Restore the current scene data
         SaveLoadManager.Instance.RestoreCurrentSceneData();

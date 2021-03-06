@@ -191,6 +191,16 @@ public static class EventHandler
         }
     }
 
+    // After Scene Loaded Event
+    public static event Action AfterSceneLoadConfinerEvent;
+    public static void CallAfterSceneConfinerLoadEvent()
+    {
+        if (AfterSceneLoadConfinerEvent != null)
+        {
+            AfterSceneLoadConfinerEvent();
+        }
+    }
+
     // After Scene Load Fade In Event
     public static event Action AfterSceneLoadFadeInEvent;
     public static void CallAfterSceneLoadFadeInEvent()

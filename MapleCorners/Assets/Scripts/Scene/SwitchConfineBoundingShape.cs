@@ -12,11 +12,11 @@ public class SwitchConfineBoundingShape : MonoBehaviour
       }*/
     private void OnEnable()
     {
-        EventHandler.AfterLoadSceneEvent += SwitchBoundingShape;
+        EventHandler.AfterSceneLoadConfinerEvent += SwitchBoundingShape;
     }
     private void OnDisable()
     {
-        EventHandler.AfterLoadSceneEvent -= SwitchBoundingShape;
+        EventHandler.AfterSceneLoadConfinerEvent -= SwitchBoundingShape;
     }
 
     //Changes the collider that Cinemachine uses to determine the edges of the screen
