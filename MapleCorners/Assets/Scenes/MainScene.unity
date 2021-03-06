@@ -7328,7 +7328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   workMoney: 0
-  itemPrice: -10
+  itemPrice: -20
   moneyController: {fileID: 491210724}
   itemname: Pumpkin
 --- !u!114 &761162647
@@ -7902,7 +7902,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sell Pumpkin $10
+  m_Text: Sell Pumpkin $20
 --- !u!222 &799059839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17110,7 +17110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sell Corn $5
+  m_Text: Sell Corn $15
 --- !u!222 &1853457596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18137,7 +18137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   workMoney: 0
-  itemPrice: -5
+  itemPrice: -15
   moneyController: {fileID: 491210724}
   itemname: CornShop
 --- !u!114 &1953777687
