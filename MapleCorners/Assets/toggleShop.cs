@@ -38,6 +38,13 @@ public class toggleShop : MonoBehaviour
         GameObject shopToggle = obj.transform.Find("ToggleShop").gameObject;
         shopToggle.SetActive(false);
 
+        //closing the shop will also close the winMessage object
+        GameObject ticket = shop.transform.Find("Ticket").gameObject;
+        GameObject winMessage = ticket.transform.Find("CongratsMessage").gameObject;
+        winMessage.SetActive(false);
+
+
+
         //Player.Instance.PlayerInputIsDisabled = false;
     }
 
