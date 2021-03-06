@@ -9,7 +9,7 @@ public class TimeManager : SingletonMonoBehavior<TimeManager>, ISaveable
 {
     //Track the game's time properties
     private int day = 1;
-    private int hour = 6;
+    private int hour = 18;
     private int minute = 30;
     private int second = 0;
     private Weekday weekday = Weekday.Mon;
