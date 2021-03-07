@@ -468,6 +468,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 3184646846601302329, guid: c392fc3cffd6f064ab8ac51050133e04,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184646846601302329, guid: c392fc3cffd6f064ab8ac51050133e04,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 432056173
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184646846601302329, guid: c392fc3cffd6f064ab8ac51050133e04,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3184646846601302333, guid: c392fc3cffd6f064ab8ac51050133e04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7105,7 +7120,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7114,7 +7129,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7130,16 +7145,16 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -4368626248097327115, guid: 3cd13fcca73a3424f919089e15a2a82e,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -8792374352412408365, guid: 3cd13fcca73a3424f919089e15a2a82e,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -4368626248097327115, guid: 3cd13fcca73a3424f919089e15a2a82e,
+      type: 3}
   m_TileMatrixArray:
   - m_RefCount: 2
     m_Data:
